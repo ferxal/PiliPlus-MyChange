@@ -1,12 +1,12 @@
-import 'package:PiliPlus/http/init.dart';
-import 'package:PiliPlus/http/search.dart';
-import 'package:PiliPlus/utils/accounts/account.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:piliplus/http/init.dart';
+import 'package:piliplus/http/search.dart';
+import 'package:piliplus/utils/accounts/account.dart';
+import 'package:piliplus/utils/id_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
 
 abstract class UrlUtils {
   // 302重定向路由截取

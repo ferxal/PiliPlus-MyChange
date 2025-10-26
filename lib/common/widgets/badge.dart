@@ -1,7 +1,7 @@
-import 'package:PiliPlus/models/common/badge_type.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models/common/badge_type.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class PBadge extends StatelessWidget {
   final String? text;

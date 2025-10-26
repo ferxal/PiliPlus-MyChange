@@ -1,25 +1,25 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/pendant_avatar.dart';
-import 'package:PiliPlus/common/widgets/view_safe_area.dart';
-import 'package:PiliPlus/models/common/image_preview_type.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/models_new/space/space/card.dart';
-import 'package:PiliPlus/models_new/space/space/followings_followed_upper.dart';
-import 'package:PiliPlus/models_new/space/space/images.dart';
-import 'package:PiliPlus/models_new/space/space/live.dart';
-import 'package:PiliPlus/models_new/space/space/pr_info.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
-import 'package:PiliPlus/utils/num_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide ContextExtensionss;
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/pendant_avatar.dart';
+import 'package:piliplus/common/widgets/view_safe_area.dart';
+import 'package:piliplus/models/common/image_preview_type.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/models_new/space/space/card.dart';
+import 'package:piliplus/models_new/space/space/followings_followed_upper.dart';
+import 'package:piliplus/models_new/space/space/images.dart';
+import 'package:piliplus/models_new/space/space/live.dart';
+import 'package:piliplus/models_new/space/space/pr_info.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/context_ext.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/image_utils.dart';
+import 'package:piliplus/utils/num_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class UserInfoCard extends StatelessWidget {
   const UserInfoCard({

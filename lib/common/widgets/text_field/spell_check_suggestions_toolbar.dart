@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:PiliPlus/common/widgets/text_field/editable_text.dart';
 import 'package:flutter/cupertino.dart' hide EditableText, EditableTextState;
 import 'package:flutter/material.dart' hide EditableText, EditableTextState;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart'
     show SelectionChangedCause, SuggestionSpan;
+import 'package:piliplus/common/widgets/text_field/editable_text.dart';
 
 // The default height of the SpellCheckSuggestionsToolbar, which
 // assumes there are the maximum number of spell check suggestions available, 3.

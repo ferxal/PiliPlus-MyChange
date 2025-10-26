@@ -1,12 +1,12 @@
-import 'package:PiliPlus/models_new/video/video_ai_conclusion/model_result.dart';
-import 'package:PiliPlus/pages/common/slide/common_slide_page.dart';
-import 'package:PiliPlus/pages/video/controller.dart';
-import 'package:PiliPlus/pages/video/introduction/ugc/widgets/selectable_text.dart';
-import 'package:PiliPlus/utils/duration_utils.dart';
 import 'package:extended_nested_scroll_view/extended_nested_scroll_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models_new/video/video_ai_conclusion/model_result.dart';
+import 'package:piliplus/pages/common/slide/common_slide_page.dart';
+import 'package:piliplus/pages/video/controller.dart';
+import 'package:piliplus/pages/video/introduction/ugc/widgets/selectable_text.dart';
+import 'package:piliplus/utils/duration_utils.dart';
 
 class AiConclusionPanel extends CommonSlidePage {
   final AiConclusionResult item;

@@ -1,8 +1,8 @@
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_mention/item.dart';
-import 'package:PiliPlus/utils/num_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/models_new/dynamic/dyn_mention/item.dart';
+import 'package:piliplus/utils/num_utils.dart';
 
 class DynMentionItem extends StatelessWidget {
   const DynMentionItem({

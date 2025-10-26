@@ -1,14 +1,14 @@
 import 'dart:convert';
 
-import 'package:PiliPlus/http/init.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/ua_type.dart';
-import 'package:PiliPlus/main.dart';
-import 'package:PiliPlus/utils/accounts/account.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/init.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/ua_type.dart';
+import 'package:piliplus/main.dart';
+import 'package:piliplus/utils/accounts/account.dart';
 
 class GeetestWebviewDialog extends StatelessWidget {
   const GeetestWebviewDialog(this.gt, this.challenge, {super.key});

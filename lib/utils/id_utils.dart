@@ -2,7 +2,7 @@
 
 import 'dart:convert';
 
-import 'package:PiliPlus/utils/utils.dart';
+import 'package:piliplus/utils/utils.dart';
 import 'package:uuid/v4.dart';
 
 abstract class IdUtils {

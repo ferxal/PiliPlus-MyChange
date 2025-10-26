@@ -1,26 +1,26 @@
 import 'dart:math';
 
-import 'package:PiliPlus/common/widgets/image/cached_network_svg_image.dart';
-import 'package:PiliPlus/common/widgets/image/custom_grid_view.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/http/constants.dart';
-import 'package:PiliPlus/models/common/image_preview_type.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/models/dynamics/article_content_model.dart'
-    show ArticleContentModel, Rich, Style, Word, Node;
-import 'package:PiliPlus/models/dynamics/result.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/vote.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide ContextExtensionss, Node;
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:piliplus/common/widgets/image/cached_network_svg_image.dart';
+import 'package:piliplus/common/widgets/image/custom_grid_view.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/http/constants.dart';
+import 'package:piliplus/models/common/image_preview_type.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/models/dynamics/article_content_model.dart'
+    show ArticleContentModel, Rich, Style, Word, Node;
+import 'package:piliplus/models/dynamics/result.dart';
+import 'package:piliplus/pages/dynamics/widgets/vote.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/context_ext.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/image_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
 import 'package:re_highlight/languages/all.dart';
 import 'package:re_highlight/re_highlight.dart';
 import 'package:re_highlight/styles/github-dark.dart';

@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:PiliPlus/pages/video/introduction/ugc/widgets/action_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/pages/video/introduction/ugc/widgets/action_item.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({

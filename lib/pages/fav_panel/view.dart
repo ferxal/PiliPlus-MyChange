@@ -1,11 +1,11 @@
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/fav/fav_folder/list.dart';
-import 'package:PiliPlus/pages/common/common_intro_controller.dart';
-import 'package:PiliPlus/utils/fav_utils.dart';
-import 'package:PiliPlus/utils/feed_back.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/fav/fav_folder/list.dart';
+import 'package:piliplus/pages/common/common_intro_controller.dart';
+import 'package:piliplus/utils/fav_utils.dart';
+import 'package:piliplus/utils/feed_back.dart';
 
 class FavPanel extends StatefulWidget {
   const FavPanel({

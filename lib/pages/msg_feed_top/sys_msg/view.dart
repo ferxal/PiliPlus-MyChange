@@ -1,19 +1,19 @@
-import 'package:PiliPlus/common/skeleton/msg_feed_sys_msg_.dart';
-import 'package:PiliPlus/common/widgets/dialog/dialog.dart';
-import 'package:PiliPlus/common/widgets/list_tile.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/http_error.dart';
-import 'package:PiliPlus/common/widgets/refresh_indicator.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/msg/msg_sys/data.dart';
-import 'package:PiliPlus/pages/msg_feed_top/sys_msg/controller.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart' hide ListTile;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/skeleton/msg_feed_sys_msg_.dart';
+import 'package:piliplus/common/widgets/dialog/dialog.dart';
+import 'package:piliplus/common/widgets/list_tile.dart';
+import 'package:piliplus/common/widgets/loading_widget/http_error.dart';
+import 'package:piliplus/common/widgets/refresh_indicator.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/msg/msg_sys/data.dart';
+import 'package:piliplus/pages/msg_feed_top/sys_msg/controller.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/id_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class SysMsgPage extends StatefulWidget {
   const SysMsgPage({super.key});

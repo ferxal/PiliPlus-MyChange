@@ -1,11 +1,3 @@
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/http/fav.dart';
-import 'package:PiliPlus/http/msg.dart';
-import 'package:PiliPlus/models_new/fav/fav_folder/list.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/fav_utils.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_debounce/easy_throttle.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +6,14 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/http/fav.dart';
+import 'package:piliplus/http/msg.dart';
+import 'package:piliplus/models_new/fav/fav_folder/list.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/fav_utils.dart';
+import 'package:piliplus/utils/image_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class CreateFavPage extends StatefulWidget {
   const CreateFavPage({super.key});

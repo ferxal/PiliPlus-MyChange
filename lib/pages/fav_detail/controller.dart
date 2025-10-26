@@ -1,24 +1,24 @@
-import 'package:PiliPlus/common/widgets/dialog/dialog.dart';
-import 'package:PiliPlus/http/fav.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/common/fav_order_type.dart';
-import 'package:PiliPlus/models/common/video/source_type.dart';
-import 'package:PiliPlus/models_new/fav/fav_detail/data.dart';
-import 'package:PiliPlus/models_new/fav/fav_detail/media.dart';
-import 'package:PiliPlus/models_new/fav/fav_folder/list.dart';
-import 'package:PiliPlus/pages/common/common_list_controller.dart';
-import 'package:PiliPlus/pages/common/multi_select/base.dart';
-import 'package:PiliPlus/pages/common/multi_select/multi_select_controller.dart';
-import 'package:PiliPlus/pages/fav_sort/view.dart';
-import 'package:PiliPlus/services/account_service.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/storage.dart';
-import 'package:PiliPlus/utils/storage_key.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:flutter/services.dart' show ValueChanged;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/dialog/dialog.dart';
+import 'package:piliplus/http/fav.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/common/fav_order_type.dart';
+import 'package:piliplus/models/common/video/source_type.dart';
+import 'package:piliplus/models_new/fav/fav_detail/data.dart';
+import 'package:piliplus/models_new/fav/fav_detail/media.dart';
+import 'package:piliplus/models_new/fav/fav_folder/list.dart';
+import 'package:piliplus/pages/common/common_list_controller.dart';
+import 'package:piliplus/pages/common/multi_select/base.dart';
+import 'package:piliplus/pages/common/multi_select/multi_select_controller.dart';
+import 'package:piliplus/pages/fav_sort/view.dart';
+import 'package:piliplus/services/account_service.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/storage.dart';
+import 'package:piliplus/utils/storage_key.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 mixin BaseFavController
     on

@@ -1,38 +1,44 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:PiliPlus/grpc/bilibili/im/interfaces/v1.pb.dart'
-    show EmotionInfo, RspSessionMsg;
-import 'package:PiliPlus/grpc/bilibili/im/type.pb.dart' show Msg, MsgType;
-import 'package:PiliPlus/grpc/im.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/msg.dart';
-import 'package:PiliPlus/pages/common/common_list_controller.dart';
-import 'package:PiliPlus/services/account_service.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/feed_back.dart';
 import 'package:fixnum/fixnum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/grpc/bilibili/im/interfaces/v1.pb.dart'
+    show EmotionInfo, RspSessionMsg;
+import 'package:piliplus/grpc/bilibili/im/type.pb.dart' show Msg, MsgType;
+import 'package:piliplus/grpc/im.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/msg.dart';
+import 'package:piliplus/pages/common/common_list_controller.dart';
+import 'package:piliplus/services/account_service.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/feed_back.dart';
 
 class WhisperDetailController extends CommonListController<RspSessionMsg, Msg> {
   final _emojiPattern = RegExp(r'\[.*?\]');
 
   String _processSendContent(String content) {
     final buffer = StringBuffer();
-    content.splitMapJoin(_emojiPattern, onMatch: (match) {
-      buffer.write(match.group(0));
-      return '';
-    }, onNonMatch: (nonMatch) {
-      buffer.write(nonMatch.runes.map((rune) {
-        int newRune = rune + 10;
-        if (newRune > 0x10FFFF) newRune -= 0x110000;
-        return String.fromCharCode(newRune);
-      }).join());
-      return '';
-    });
-    return buffer.toString();
+    content.splitMapJoin(
+      _emojiPattern,
+      onMatch: (match) {
+        buffer.write(match.group(0));
+        return '';
+      },
+      onNonMatch: (nonMatch) {
+        buffer.write(
+          nonMatch.runes.map((rune) {
+            int newRune = rune + 10;
+            if (newRune > 0x10FFFF) newRune -= 0x110000;
+            return String.fromCharCode(newRune);
+          }).join(),
+        );
+        return '';
+      },
+    );
+    return '\uFFFF' + buffer.toString();
   }
 
   AccountService accountService = Get.find<AccountService>();

@@ -1,20 +1,20 @@
 import 'dart:math';
 
-import 'package:PiliPlus/common/widgets/list_tile.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/http_error.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/common/widgets/refresh_indicator.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/search/search_trending/list.dart';
-import 'package:PiliPlus/pages/search_trending/controller.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide ListTile;
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 import 'package:get/get.dart' hide ContextExtensionss;
+import 'package:piliplus/common/widgets/list_tile.dart';
+import 'package:piliplus/common/widgets/loading_widget/http_error.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/common/widgets/refresh_indicator.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/search/search_trending/list.dart';
+import 'package:piliplus/pages/search_trending/controller.dart';
+import 'package:piliplus/utils/context_ext.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/image_utils.dart';
 
 class SearchTrendingPage extends StatefulWidget {
   const SearchTrendingPage({super.key});

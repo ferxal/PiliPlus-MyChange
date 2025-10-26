@@ -12,9 +12,9 @@ library;
 
 import 'dart:ui' show lerpDouble;
 
-import 'package:PiliPlus/common/widgets/dyn/button.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' hide InkWell, ButtonStyleButton;
+import 'package:piliplus/common/widgets/dyn/button.dart';
 
 /// A Material Design "Text Button".
 ///

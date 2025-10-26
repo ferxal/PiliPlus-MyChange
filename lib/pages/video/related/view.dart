@@ -1,12 +1,12 @@
-import 'package:PiliPlus/common/widgets/loading_widget/http_error.dart';
-import 'package:PiliPlus/common/widgets/video_card/video_card_h.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/model_hot_video_item.dart';
-import 'package:PiliPlus/pages/video/related/controller.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/grid.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/loading_widget/http_error.dart';
+import 'package:piliplus/common/widgets/video_card/video_card_h.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/model_hot_video_item.dart';
+import 'package:piliplus/pages/video/related/controller.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/grid.dart';
 
 class RelatedVideoPanel extends StatefulWidget {
   const RelatedVideoPanel({super.key, required this.heroTag});

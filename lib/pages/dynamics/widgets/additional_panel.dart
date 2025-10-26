@@ -1,17 +1,17 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/dyn/ink_well.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/http/dynamics.dart';
-import 'package:PiliPlus/models/dynamics/result.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_reserve/data.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/vote.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/num_utils.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart' hide InkWell;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/dyn/ink_well.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/http/dynamics.dart';
+import 'package:piliplus/models/dynamics/result.dart';
+import 'package:piliplus/models_new/dynamic/dyn_reserve/data.dart';
+import 'package:piliplus/pages/dynamics/widgets/vote.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/num_utils.dart';
 
 Widget addWidget(
   BuildContext context, {

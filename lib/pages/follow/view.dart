@@ -1,16 +1,16 @@
-import 'package:PiliPlus/common/widgets/dialog/dialog.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/common/widgets/scroll_physics.dart';
-import 'package:PiliPlus/common/widgets/view_safe_area.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/member/tags.dart';
-import 'package:PiliPlus/pages/follow/child/child_controller.dart';
-import 'package:PiliPlus/pages/follow/child/child_view.dart';
-import 'package:PiliPlus/pages/follow/controller.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show LengthLimitingTextInputFormatter;
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/dialog/dialog.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/common/widgets/scroll_physics.dart';
+import 'package:piliplus/common/widgets/view_safe_area.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/member/tags.dart';
+import 'package:piliplus/pages/follow/child/child_controller.dart';
+import 'package:piliplus/pages/follow/child/child_view.dart';
+import 'package:piliplus/pages/follow/controller.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class FollowPage extends StatefulWidget {
   const FollowPage({super.key});

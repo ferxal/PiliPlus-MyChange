@@ -1,7 +1,7 @@
-import 'package:PiliPlus/http/api.dart';
-import 'package:PiliPlus/http/init.dart';
-import 'package:PiliPlus/utils/accounts.dart';
 import 'package:dio/dio.dart';
+import 'package:piliplus/http/api.dart';
+import 'package:piliplus/http/init.dart';
+import 'package:piliplus/utils/accounts.dart';
 
 class ValidateHttp {
   static Future gaiaVgateRegister(String vVoucher) async {

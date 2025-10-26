@@ -1,8 +1,8 @@
-import 'package:PiliPlus/pages/fav/pgc/child_view.dart';
-import 'package:PiliPlus/pages/fav/pgc/controller.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/pages/fav/pgc/child_view.dart';
+import 'package:piliplus/pages/fav/pgc/controller.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class FavPgcPage extends StatefulWidget {
   const FavPgcPage({super.key, required this.type});

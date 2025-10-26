@@ -1,5 +1,5 @@
-import 'package:PiliPlus/pages/setting/models/play_settings.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/pages/setting/models/play_settings.dart';
 
 class PlaySetting extends StatefulWidget {
   const PlaySetting({super.key, this.showAppBar = true});

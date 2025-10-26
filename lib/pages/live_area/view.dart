@@ -1,20 +1,20 @@
-import 'package:PiliPlus/common/widgets/button/icon_button.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/keep_alive_wrapper.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/common/widgets/scroll_physics.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/models_new/live/live_area_list/area_item.dart';
-import 'package:PiliPlus/models_new/live/live_area_list/area_list.dart';
-import 'package:PiliPlus/pages/live_area/controller.dart';
-import 'package:PiliPlus/pages/live_area_detail/view.dart';
-import 'package:PiliPlus/pages/search/widgets/search_text.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sortable_wrap/sortable_wrap.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:piliplus/common/widgets/button/icon_button.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/keep_alive_wrapper.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/common/widgets/scroll_physics.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/models_new/live/live_area_list/area_item.dart';
+import 'package:piliplus/models_new/live/live_area_list/area_list.dart';
+import 'package:piliplus/pages/live_area/controller.dart';
+import 'package:piliplus/pages/live_area_detail/view.dart';
+import 'package:piliplus/pages/search/widgets/search_text.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class LiveAreaPage extends StatefulWidget {
   const LiveAreaPage({super.key});

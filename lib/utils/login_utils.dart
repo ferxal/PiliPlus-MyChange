@@ -1,30 +1,30 @@
 import 'dart:async' show FutureOr;
 import 'dart:io' show Platform;
 
-import 'package:PiliPlus/grpc/grpc_req.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/user.dart';
-import 'package:PiliPlus/main.dart';
-import 'package:PiliPlus/models/common/dynamic/dynamics_type.dart';
-import 'package:PiliPlus/models/common/home_tab_type.dart';
-import 'package:PiliPlus/models/user/info.dart';
-import 'package:PiliPlus/models/user/stat.dart';
-import 'package:PiliPlus/pages/dynamics/controller.dart';
-import 'package:PiliPlus/pages/dynamics_tab/controller.dart';
-import 'package:PiliPlus/pages/live/controller.dart';
-import 'package:PiliPlus/pages/main/controller.dart';
-import 'package:PiliPlus/pages/mine/controller.dart';
-import 'package:PiliPlus/pages/pgc/controller.dart';
-import 'package:PiliPlus/services/account_service.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/accounts/account.dart';
-import 'package:PiliPlus/utils/request_utils.dart';
-import 'package:PiliPlus/utils/storage.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart' as web;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/grpc/grpc_req.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/user.dart';
+import 'package:piliplus/main.dart';
+import 'package:piliplus/models/common/dynamic/dynamics_type.dart';
+import 'package:piliplus/models/common/home_tab_type.dart';
+import 'package:piliplus/models/user/info.dart';
+import 'package:piliplus/models/user/stat.dart';
+import 'package:piliplus/pages/dynamics/controller.dart';
+import 'package:piliplus/pages/dynamics_tab/controller.dart';
+import 'package:piliplus/pages/live/controller.dart';
+import 'package:piliplus/pages/main/controller.dart';
+import 'package:piliplus/pages/mine/controller.dart';
+import 'package:piliplus/pages/pgc/controller.dart';
+import 'package:piliplus/services/account_service.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/accounts/account.dart';
+import 'package:piliplus/utils/request_utils.dart';
+import 'package:piliplus/utils/storage.dart';
+import 'package:piliplus/utils/storage_pref.dart';
+import 'package:piliplus/utils/utils.dart';
 
 abstract class LoginUtils {
   static FutureOr setWebCookie([Account? account]) {

@@ -1,21 +1,21 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/badge.dart';
-import 'package:PiliPlus/common/widgets/dyn/ink_well.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/grpc/bilibili/app/listener/v1.pbenum.dart'
-    show PlaylistSource;
-import 'package:PiliPlus/models/dynamics/result.dart';
-import 'package:PiliPlus/pages/audio/view.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/forward_panel.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/live_panel.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/live_panel_sub.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/live_rcmd_panel.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/video_panel.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart' hide InkWell;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/badge.dart';
+import 'package:piliplus/common/widgets/dyn/ink_well.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/grpc/bilibili/app/listener/v1.pbenum.dart'
+    show PlaylistSource;
+import 'package:piliplus/models/dynamics/result.dart';
+import 'package:piliplus/pages/audio/view.dart';
+import 'package:piliplus/pages/dynamics/widgets/forward_panel.dart';
+import 'package:piliplus/pages/dynamics/widgets/live_panel.dart';
+import 'package:piliplus/pages/dynamics/widgets/live_panel_sub.dart';
+import 'package:piliplus/pages/dynamics/widgets/live_rcmd_panel.dart';
+import 'package:piliplus/pages/dynamics/widgets/video_panel.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/page_utils.dart';
 
 Widget noneWidget(ThemeData theme, String? tips) => Row(
   spacing: 5,

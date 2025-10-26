@@ -5,9 +5,9 @@
 /// @docImport 'package:flutter/material.dart';
 library;
 
-import 'package:PiliPlus/common/widgets/text_field/editable_text.dart';
 import 'package:flutter/material.dart' hide EditableText, EditableTextState;
 import 'package:flutter/services.dart';
+import 'package:piliplus/common/widgets/text_field/editable_text.dart';
 
 /// Displays the system context menu on top of the Flutter view.
 ///

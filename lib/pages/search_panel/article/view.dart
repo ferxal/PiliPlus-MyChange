@@ -1,11 +1,11 @@
-import 'package:PiliPlus/common/widgets/custom_sliver_persistent_header_delegate.dart';
-import 'package:PiliPlus/models/search/result.dart';
-import 'package:PiliPlus/pages/search_panel/article/controller.dart';
-import 'package:PiliPlus/pages/search_panel/article/widgets/item.dart';
-import 'package:PiliPlus/pages/search_panel/view.dart';
-import 'package:PiliPlus/utils/grid.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/custom_sliver_persistent_header_delegate.dart';
+import 'package:piliplus/models/search/result.dart';
+import 'package:piliplus/pages/search_panel/article/controller.dart';
+import 'package:piliplus/pages/search_panel/article/widgets/item.dart';
+import 'package:piliplus/pages/search_panel/view.dart';
+import 'package:piliplus/utils/grid.dart';
 
 class SearchArticlePanel extends CommonSearchPanel {
   const SearchArticlePanel({

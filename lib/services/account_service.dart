@@ -1,6 +1,6 @@
-import 'package:PiliPlus/models/user/info.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models/user/info.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 class AccountService extends GetxService {
   late int mid;

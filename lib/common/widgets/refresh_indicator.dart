@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:math' as math;
 
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart' show clampDouble;
 import 'package:flutter/material.dart' hide RefreshIndicator;
+import 'package:piliplus/utils/storage_pref.dart';
 
 Widget refreshIndicator({
   required RefreshCallback onRefresh,

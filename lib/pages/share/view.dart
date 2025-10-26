@@ -1,14 +1,14 @@
-import 'package:PiliPlus/common/widgets/button/icon_button.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/self_sized_horizontal_list.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/pages/contact/view.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/request_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show LengthLimitingTextInputFormatter;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/button/icon_button.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/self_sized_horizontal_list.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/pages/contact/view.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/request_utils.dart';
 
 class UserModel {
   const UserModel({

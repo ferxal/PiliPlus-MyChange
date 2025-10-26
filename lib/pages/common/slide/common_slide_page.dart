@@ -1,9 +1,9 @@
 import 'dart:math' show max;
 
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:flutter/gestures.dart' show PositionedGestureDetails;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 abstract class CommonSlidePage extends StatefulWidget {
   const CommonSlidePage({super.key, this.enableSlide = true});

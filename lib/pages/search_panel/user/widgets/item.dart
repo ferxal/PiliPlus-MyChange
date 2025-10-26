@@ -1,8 +1,8 @@
-import 'package:PiliPlus/common/widgets/pendant_avatar.dart';
-import 'package:PiliPlus/models/search/result.dart';
-import 'package:PiliPlus/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/pendant_avatar.dart';
+import 'package:piliplus/models/search/result.dart';
+import 'package:piliplus/utils/num_utils.dart';
 
 class SearchUserItem extends StatelessWidget {
   const SearchUserItem({

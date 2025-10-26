@@ -1,11 +1,11 @@
-import 'package:PiliPlus/models/common/live_search_type.dart';
-import 'package:PiliPlus/pages/live_search/child/controller.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models/common/live_search_type.dart';
+import 'package:piliplus/pages/live_search/child/controller.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/id_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class LiveSearchController extends GetxController
     with GetSingleTickerProviderStateMixin {

@@ -1,8 +1,8 @@
-import 'package:PiliPlus/pages/follow_type/follow_same/controller.dart';
-import 'package:PiliPlus/pages/follow_type/view.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/pages/follow_type/follow_same/controller.dart';
+import 'package:piliplus/pages/follow_type/view.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class FollowSamePage extends StatefulWidget {
   const FollowSamePage({super.key});

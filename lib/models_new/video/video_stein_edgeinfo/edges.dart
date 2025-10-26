@@ -1,6 +1,6 @@
-import 'package:PiliPlus/models_new/video/video_stein_edgeinfo/dimension.dart';
-import 'package:PiliPlus/models_new/video/video_stein_edgeinfo/question.dart';
-import 'package:PiliPlus/models_new/video/video_stein_edgeinfo/skin.dart';
+import 'package:piliplus/models_new/video/video_stein_edgeinfo/dimension.dart';
+import 'package:piliplus/models_new/video/video_stein_edgeinfo/question.dart';
+import 'package:piliplus/models_new/video/video_stein_edgeinfo/skin.dart';
 
 class Edges {
   Dimension? dimension;

@@ -1,11 +1,11 @@
-import 'package:PiliPlus/models_new/follow/data.dart';
-import 'package:PiliPlus/models_new/follow/list.dart';
-import 'package:PiliPlus/pages/common/search/common_search_page.dart';
-import 'package:PiliPlus/pages/follow/widgets/follow_item.dart';
-import 'package:PiliPlus/pages/follow_search/controller.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models_new/follow/data.dart';
+import 'package:piliplus/models_new/follow/list.dart';
+import 'package:piliplus/pages/common/search/common_search_page.dart';
+import 'package:piliplus/pages/follow/widgets/follow_item.dart';
+import 'package:piliplus/pages/follow_search/controller.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class FollowSearchPage extends CommonSearchPage {
   const FollowSearchPage({

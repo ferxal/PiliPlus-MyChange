@@ -5,11 +5,11 @@
 /// @docImport 'package:flutter/material.dart';
 library;
 
-import 'package:PiliPlus/common/widgets/text_field/editable_text.dart';
 import 'package:flutter/cupertino.dart' hide EditableText, EditableTextState;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart'
     show SelectionChangedCause, SuggestionSpan;
+import 'package:piliplus/common/widgets/text_field/editable_text.dart';
 
 /// iOS only shows 3 spell check suggestions in the toolbar.
 const int _kMaxSuggestions = 3;

@@ -2,29 +2,29 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:math' show max;
 
-import 'package:PiliPlus/common/widgets/button/toolbar_icon_button.dart';
-import 'package:PiliPlus/common/widgets/text_field/controller.dart'
-    show RichTextType;
-import 'package:PiliPlus/common/widgets/text_field/text_field.dart';
-import 'package:PiliPlus/common/widgets/view_safe_area.dart';
-import 'package:PiliPlus/grpc/bilibili/main/community/reply/v1.pb.dart'
-    show ReplyInfo;
-import 'package:PiliPlus/http/video.dart';
-import 'package:PiliPlus/main.dart';
-import 'package:PiliPlus/models/common/publish_panel_type.dart';
-import 'package:PiliPlus/pages/common/publish/common_rich_text_pub_page.dart';
-import 'package:PiliPlus/pages/dynamics_mention/controller.dart';
-import 'package:PiliPlus/pages/emote/view.dart';
-import 'package:PiliPlus/pages/video/controller.dart';
-import 'package:PiliPlus/pages/video/reply_search_item/view.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
-import 'package:PiliPlus/utils/duration_utils.dart';
-import 'package:PiliPlus/utils/grid.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart' hide TextField;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart' hide ContextExtensionss;
+import 'package:piliplus/common/widgets/button/toolbar_icon_button.dart';
+import 'package:piliplus/common/widgets/text_field/controller.dart'
+    show RichTextType;
+import 'package:piliplus/common/widgets/text_field/text_field.dart';
+import 'package:piliplus/common/widgets/view_safe_area.dart';
+import 'package:piliplus/grpc/bilibili/main/community/reply/v1.pb.dart'
+    show ReplyInfo;
+import 'package:piliplus/http/video.dart';
+import 'package:piliplus/main.dart';
+import 'package:piliplus/models/common/publish_panel_type.dart';
+import 'package:piliplus/pages/common/publish/common_rich_text_pub_page.dart';
+import 'package:piliplus/pages/dynamics_mention/controller.dart';
+import 'package:piliplus/pages/emote/view.dart';
+import 'package:piliplus/pages/video/controller.dart';
+import 'package:piliplus/pages/video/reply_search_item/view.dart';
+import 'package:piliplus/utils/context_ext.dart';
+import 'package:piliplus/utils/duration_utils.dart';
+import 'package:piliplus/utils/grid.dart';
+import 'package:piliplus/utils/storage_pref.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class ReplyPage extends CommonRichTextPubPage {
   final int oid;

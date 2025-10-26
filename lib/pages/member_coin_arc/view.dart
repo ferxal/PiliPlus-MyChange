@@ -1,16 +1,16 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/skeleton/video_card_v.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/http_error.dart';
-import 'package:PiliPlus/common/widgets/refresh_indicator.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/member/coin_like_arc/item.dart';
-import 'package:PiliPlus/pages/member_coin_arc/controller.dart';
-import 'package:PiliPlus/pages/member_coin_arc/widgets/item.dart';
-import 'package:PiliPlus/services/account_service.dart';
-import 'package:PiliPlus/utils/grid.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/skeleton/video_card_v.dart';
+import 'package:piliplus/common/widgets/loading_widget/http_error.dart';
+import 'package:piliplus/common/widgets/refresh_indicator.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/member/coin_like_arc/item.dart';
+import 'package:piliplus/pages/member_coin_arc/controller.dart';
+import 'package:piliplus/pages/member_coin_arc/widgets/item.dart';
+import 'package:piliplus/services/account_service.dart';
+import 'package:piliplus/utils/grid.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class MemberCoinArcPage extends StatefulWidget {
   const MemberCoinArcPage({

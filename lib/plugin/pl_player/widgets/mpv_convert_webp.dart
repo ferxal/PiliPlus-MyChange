@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:ffi';
 
-import 'package:PiliPlus/http/constants.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:get/get_rx/get_rx.dart';
@@ -12,6 +10,8 @@ import 'package:media_kit/generated/libmpv/bindings.dart' as generated;
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit/src/player/native/core/initializer.dart';
 import 'package:media_kit/src/player/native/core/native_library.dart';
+import 'package:piliplus/http/constants.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 class MpvConvertWebp {
   final _mpv = generated.MPV(DynamicLibrary.open(NativeLibrary.path));

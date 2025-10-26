@@ -1,11 +1,11 @@
-import 'package:PiliPlus/common/widgets/scroll_physics.dart';
-import 'package:PiliPlus/common/widgets/view_safe_area.dart';
-import 'package:PiliPlus/models/common/live_search_type.dart';
-import 'package:PiliPlus/pages/live_search/child/view.dart';
-import 'package:PiliPlus/pages/live_search/controller.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/scroll_physics.dart';
+import 'package:piliplus/common/widgets/view_safe_area.dart';
+import 'package:piliplus/models/common/live_search_type.dart';
+import 'package:piliplus/pages/live_search/child/view.dart';
+import 'package:piliplus/pages/live_search/controller.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class LiveSearchPage extends StatefulWidget {
   const LiveSearchPage({super.key});

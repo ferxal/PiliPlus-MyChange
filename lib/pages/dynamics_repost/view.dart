@@ -1,19 +1,19 @@
-import 'package:PiliPlus/common/widgets/draggable_sheet/draggable_scrollable_sheet_dyn.dart'
-    show DraggableScrollableSheet;
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/text_field/text_field.dart';
-import 'package:PiliPlus/http/dynamics.dart';
-import 'package:PiliPlus/models/common/publish_panel_type.dart';
-import 'package:PiliPlus/models/dynamics/result.dart';
-import 'package:PiliPlus/pages/common/publish/common_rich_text_pub_page.dart';
-import 'package:PiliPlus/pages/dynamics_mention/controller.dart';
-import 'package:PiliPlus/pages/emote/controller.dart';
-import 'package:PiliPlus/pages/emote/view.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/request_utils.dart';
 import 'package:flutter/material.dart' hide DraggableScrollableSheet, TextField;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/draggable_sheet/draggable_scrollable_sheet_dyn.dart'
+    show DraggableScrollableSheet;
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/text_field/text_field.dart';
+import 'package:piliplus/http/dynamics.dart';
+import 'package:piliplus/models/common/publish_panel_type.dart';
+import 'package:piliplus/models/dynamics/result.dart';
+import 'package:piliplus/pages/common/publish/common_rich_text_pub_page.dart';
+import 'package:piliplus/pages/dynamics_mention/controller.dart';
+import 'package:piliplus/pages/emote/controller.dart';
+import 'package:piliplus/pages/emote/view.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/request_utils.dart';
 
 class RepostPanel extends CommonRichTextPubPage {
   const RepostPanel({

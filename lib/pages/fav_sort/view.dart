@@ -1,12 +1,12 @@
-import 'package:PiliPlus/http/fav.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/fav/fav_detail/media.dart';
-import 'package:PiliPlus/pages/fav_detail/controller.dart';
-import 'package:PiliPlus/pages/fav_detail/widget/fav_video_card.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/fav.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/fav/fav_detail/media.dart';
+import 'package:piliplus/pages/fav_detail/controller.dart';
+import 'package:piliplus/pages/fav_detail/widget/fav_video_card.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class FavSortPage extends StatefulWidget {
   const FavSortPage({super.key, required this.favDetailController});

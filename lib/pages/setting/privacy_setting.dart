@@ -1,5 +1,5 @@
-import 'package:PiliPlus/pages/setting/models/privacy_settings.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/pages/setting/models/privacy_settings.dart';
 
 class PrivacySetting extends StatefulWidget {
   const PrivacySetting({super.key, this.showAppBar = true});

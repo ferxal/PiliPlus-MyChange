@@ -1,5 +1,5 @@
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:hive/hive.dart';
+import 'package:piliplus/utils/extension.dart';
 
 part 'info.g.dart';
 

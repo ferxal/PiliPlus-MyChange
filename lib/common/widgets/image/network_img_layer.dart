@@ -1,10 +1,10 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/image_utils.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 class NetworkImgLayer extends StatelessWidget {
   const NetworkImgLayer({

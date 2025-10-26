@@ -1,8 +1,8 @@
-import 'package:PiliPlus/pages/fav/note/child_view.dart';
-import 'package:PiliPlus/pages/fav/note/controller.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/pages/fav/note/child_view.dart';
+import 'package:piliplus/pages/fav/note/controller.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class FavNotePage extends StatefulWidget {
   const FavNotePage({super.key});

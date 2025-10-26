@@ -1,10 +1,10 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/main.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:flex_seed_scheme/flex_seed_scheme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/main.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 abstract class ThemeUtils {
   static ThemeData getThemeData({

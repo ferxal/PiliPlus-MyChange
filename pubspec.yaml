@@ -1,4 +1,4 @@
-name: PiliPlus
+name: piliplus
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -271,10 +271,10 @@ dev_dependencies:
 
 flutter_launcher_icons:
   android: true
-  image_path: assets/images/logo/logo_2.png
-  image_path_android: assets/images/logo/logo_2.png
+  image_path: assets/images/APP.png
+  image_path_android: assets/images/APP.png
   adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: assets/images/logo/logo_2.png
+  adaptive_icon_foreground: assets/images/APP.png
   adaptive_icon_monochrome: assets/images/logo/logo_2.png
 
 flutter_native_splash:

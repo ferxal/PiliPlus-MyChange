@@ -56,19 +56,19 @@ jobs:
         run: flutter build linux --release -v --pub --dart-define-from-file=pili_release.json
 
       - name: Package .tar.gz
-        run: tar -zcvf PiliPlus_linux_${{ env.version }}_arm64.tar.gz -C build/linux/arm64/release/bundle .
+        run: tar -zcvf piliplus_linux_${{ env.version }}_arm64.tar.gz -C build/linux/arm64/release/bundle .
 
       - name: Packege deb
         run: |
           printf "建立构建目录...\n"
-          mkdir "PiliPlus_linux_${{ env.version }}_arm64"
-          pushd "PiliPlus_linux_${{ env.version }}_arm64"
-          mkdir -p opt/PiliPlus
+          mkdir "piliplus_linux_${{ env.version }}_arm64"
+          pushd "piliplus_linux_${{ env.version }}_arm64"
+          mkdir -p opt/piliplus
           mkdir -p usr/share/applications
           mkdir -p usr/share/icons/hicolor/512x512/apps
 
           printf "复制文件...\n"
-          cp -r ../build/linux/arm64/release/bundle/* opt/PiliPlus
+          cp -r ../build/linux/arm64/release/bundle/* opt/piliplus
           cp -r ../assets/linux/DEBIAN .
           cp ../assets/linux/piliplus.desktop usr/share/applications
           cp ../assets/images/logo/logo.png usr/share/icons/hicolor/512x512/apps/piliplus.png
@@ -84,9 +84,9 @@ jobs:
           sed -i "9s/size_need_change/${SIZE_KB}/g" DEBIAN/control
 
           printf "生成并写入 md5sums ...\n"
-          md5sum opt/PiliPlus/piliplus >> DEBIAN/md5sums
-          md5sum opt/PiliPlus/lib/* >> DEBIAN/md5sums
-          md5sum opt/PiliPlus/data/icudtl.dat >> DEBIAN/md5sums
+          md5sum opt/piliplus/piliplus >> DEBIAN/md5sums
+          md5sum opt/piliplus/lib/* >> DEBIAN/md5sums
+          md5sum opt/piliplus/data/icudtl.dat >> DEBIAN/md5sums
 
           printf "设置权限...\n"
           chmod 0644 DEBIAN/control
@@ -97,8 +97,8 @@ jobs:
 
           printf "打包 deb 文件...\n"
           popd
-          dpkg-deb --build --verbose --root-owner-group "PiliPlus_linux_${{ env.version }}_arm64"
-          printf "完成: PiliPlus_linux_%s_arm64.deb\n" "${{ env.version }}"
+          dpkg-deb --build --verbose --root-owner-group "piliplus_linux_${{ env.version }}_arm64"
+          printf "完成: piliplus_linux_%s_arm64.deb\n" "${{ env.version }}"
         shell: bash
 
       - name: Packege rpm
@@ -121,7 +121,7 @@ jobs:
           Name:           piliplus
           Version:        ${{ env.version }}
           Release:        1%{?dist}
-          Summary:        PiliPlus Linux Version
+          Summary:        piliplus Linux Version
           License:        GPL-3.0
           Source0:        piliplus-${{ env.version }}.tar.gz
           Requires:       desktop-file-utils, hicolor-icon-theme
@@ -135,13 +135,13 @@ jobs:
           %build
 
           %install
-          mkdir -p %{buildroot}/opt/PiliPlus
-          cp -r bundle/* %{buildroot}/opt/PiliPlus/
+          mkdir -p %{buildroot}/opt/piliplus
+          cp -r bundle/* %{buildroot}/opt/piliplus/
 
           # 二进制权限与命令行入口
-          chmod 755 %{buildroot}/opt/PiliPlus/piliplus
+          chmod 755 %{buildroot}/opt/piliplus/piliplus
           mkdir -p %{buildroot}/usr/bin
-          ln -sf /opt/PiliPlus/piliplus %{buildroot}/usr/bin/piliplus
+          ln -sf /opt/piliplus/piliplus %{buildroot}/usr/bin/piliplus
 
           # 桌面集成
           mkdir -p %{buildroot}/usr/share/applications
@@ -159,7 +159,7 @@ jobs:
           gtk-update-icon-cache -q -t -f %{_datadir}/icons/hicolor || true
 
           %files
-          /opt/PiliPlus
+          /opt/piliplus
           /usr/bin/piliplus
           /usr/share/applications/piliplus.desktop
           /usr/share/icons/hicolor/512x512/apps/piliplus.png
@@ -175,11 +175,11 @@ jobs:
           rpmbuild --define "_topdir $RPM_BUILD_ROOT" -bb "$RPM_BUILD_ROOT/SPECS/piliplus.spec"
 
           printf "移动生成的 RPM...\n"
-          find "$RPM_BUILD_ROOT/RPMS" -name "*.rpm" -exec mv {} "PiliPlus_linux_${{ env.version }}_arm64.rpm" \;
+          find "$RPM_BUILD_ROOT/RPMS" -name "*.rpm" -exec mv {} "piliplus_linux_${{ env.version }}_arm64.rpm" \;
 
-          printf "完成: PiliPlus_linux_%s_arm64.rpm\n" "${{ env.version }}"
+          printf "完成: piliplus_linux_%s_arm64.rpm\n" "${{ env.version }}"
         shell: bash
-      
+
       - name: Package AppImage
         run: |
           printf "下载 appimagetool (ARM64)...\n"
@@ -187,7 +187,7 @@ jobs:
           chmod +x appimagetool-aarch64.AppImage
 
           printf "建立 AppDir 目录结构...\n"
-          APPDIR="PiliPlus.AppDir"
+          APPDIR="piliplus.AppDir"
           mkdir -p "$APPDIR/usr/bin"
           mkdir -p "$APPDIR/usr/lib"
           mkdir -p "$APPDIR/usr/share/applications"
@@ -195,13 +195,13 @@ jobs:
 
           printf "复制应用文件...\n"
           cp -r build/linux/arm64/release/bundle/* "$APPDIR/usr/bin/"
-          
+
           printf "复制桌面文件和图标...\n"
           cp assets/linux/piliplus.desktop "$APPDIR/piliplus.desktop"
           cp assets/linux/piliplus.desktop "$APPDIR/usr/share/applications/piliplus.desktop"
           cp assets/images/logo/logo.png "$APPDIR/piliplus.png"
           cp assets/images/logo/logo.png "$APPDIR/usr/share/icons/hicolor/512x512/apps/piliplus.png"
-          
+
           printf "创建 AppRun 启动脚本...\n"
           cat > "$APPDIR/AppRun" <<'APPRUN_EOF'
           #!/bin/bash
@@ -218,9 +218,9 @@ jobs:
           sed -i 's|Icon=piliplus|Icon=piliplus|g' "$APPDIR/piliplus.desktop"
 
           printf "打包 AppImage...\n"
-          ARCH=aarch64 ./appimagetool-aarch64.AppImage "$APPDIR" "PiliPlus_linux_${{ env.version }}_arm64.AppImage"
-          
-          printf "完成: PiliPlus_linux_%s_arm64.AppImage\n" "${{ env.version }}"
+          ARCH=aarch64 ./appimagetool-aarch64.AppImage "$APPDIR" "piliplus_linux_${{ env.version }}_arm64.AppImage"
+
+          printf "完成: piliplus_linux_%s_arm64.AppImage\n" "${{ env.version }}"
         shell: bash
 
       - name: Release
@@ -230,31 +230,31 @@ jobs:
           tag_name: ${{ github.event.inputs.tag }}
           name: ${{ github.event.inputs.tag }}
           files: |
-            PiliPlus_linux_*.tar.gz
-            PiliPlus_linux_*.deb
-            PiliPlus_linux_*.rpm
-            PiliPlus_linux_*.AppImage
+            piliplus_linux_*.tar.gz
+            piliplus_linux_*.deb
+            piliplus_linux_*.rpm
+            piliplus_linux_*.AppImage
 
       - name: Upload linux targz package
         uses: actions/upload-artifact@v4
         with:
           name: Linux_targz_arm64_packege
-          path: PiliPlus_linux_*.tar.gz
+          path: piliplus_linux_*.tar.gz
 
       - name: Upload linux deb package
         uses: actions/upload-artifact@v4
         with:
           name: Linux_deb_arm64_package
-          path: PiliPlus_linux_*.deb
+          path: piliplus_linux_*.deb
 
       - name: Upload linux rpm package
         uses: actions/upload-artifact@v4
         with:
           name: Linux_rpm_arm64_package
-          path: PiliPlus_linux_*.rpm
-      
+          path: piliplus_linux_*.rpm
+
       - name: Upload linux AppImage package
         uses: actions/upload-artifact@v4
         with:
           name: Linux_AppImage_arm64_package
-          path: PiliPlus_linux_*.AppImage
+          path: piliplus_linux_*.AppImage

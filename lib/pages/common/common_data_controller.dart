@@ -1,6 +1,6 @@
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/pages/common/common_controller.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/pages/common/common_controller.dart';
 
 abstract class CommonDataController<R, T> extends CommonController<R, T> {
   @override

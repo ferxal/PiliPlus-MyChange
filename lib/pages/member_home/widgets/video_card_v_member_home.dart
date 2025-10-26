@@ -1,16 +1,16 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/badge.dart';
-import 'package:PiliPlus/common/widgets/image/image_save.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/http/search.dart';
-import 'package:PiliPlus/models/common/badge_type.dart';
-import 'package:PiliPlus/models_new/space/space_archive/item.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/duration_utils.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/badge.dart';
+import 'package:piliplus/common/widgets/image/image_save.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/http/search.dart';
+import 'package:piliplus/models/common/badge_type.dart';
+import 'package:piliplus/models_new/space/space_archive/item.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/duration_utils.dart';
+import 'package:piliplus/utils/id_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 // 视频卡片 - 垂直布局
 class VideoCardVMemberHome extends StatelessWidget {

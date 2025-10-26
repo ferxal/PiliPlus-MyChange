@@ -1,17 +1,17 @@
 import 'dart:math';
 
-import 'package:PiliPlus/common/widgets/list_tile.dart';
-import 'package:PiliPlus/common/widgets/view_safe_area.dart';
-import 'package:PiliPlus/pages/setting/widgets/switch_item.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
-import 'package:PiliPlus/utils/storage.dart';
-import 'package:PiliPlus/utils/storage_key.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:flutter/material.dart' hide ListTile;
 import 'package:flutter/services.dart' show FilteringTextInputFormatter;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart' hide ContextExtensionss;
 import 'package:hive/hive.dart';
+import 'package:piliplus/common/widgets/list_tile.dart';
+import 'package:piliplus/common/widgets/view_safe_area.dart';
+import 'package:piliplus/pages/setting/widgets/switch_item.dart';
+import 'package:piliplus/utils/context_ext.dart';
+import 'package:piliplus/utils/storage.dart';
+import 'package:piliplus/utils/storage_key.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 class PlaySpeedPage extends StatefulWidget {
   const PlaySpeedPage({super.key});

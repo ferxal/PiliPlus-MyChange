@@ -1,10 +1,10 @@
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/msg.dart';
-import 'package:PiliPlus/models_new/msg/msg_like_detail/card.dart';
-import 'package:PiliPlus/models_new/msg/msg_like_detail/data.dart';
-import 'package:PiliPlus/models_new/msg/msg_like_detail/item.dart';
-import 'package:PiliPlus/pages/common/common_list_controller.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/msg.dart';
+import 'package:piliplus/models_new/msg/msg_like_detail/card.dart';
+import 'package:piliplus/models_new/msg/msg_like_detail/data.dart';
+import 'package:piliplus/models_new/msg/msg_like_detail/item.dart';
+import 'package:piliplus/pages/common/common_list_controller.dart';
 
 class LikeDetailController
     extends CommonListController<MsgLikeDetailData, MsgLikeDetailItem> {

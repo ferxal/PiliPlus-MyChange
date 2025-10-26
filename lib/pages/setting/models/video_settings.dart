@@ -1,22 +1,22 @@
 import 'dart:io';
 
-import 'package:PiliPlus/models/common/settings_type.dart';
-import 'package:PiliPlus/models/common/video/audio_quality.dart';
-import 'package:PiliPlus/models/common/video/cdn_type.dart';
-import 'package:PiliPlus/models/common/video/live_quality.dart';
-import 'package:PiliPlus/models/common/video/video_decode_type.dart';
-import 'package:PiliPlus/models/common/video/video_quality.dart';
-import 'package:PiliPlus/pages/setting/models/model.dart';
-import 'package:PiliPlus/pages/setting/widgets/ordered_multi_select_dialog.dart';
-import 'package:PiliPlus/pages/setting/widgets/select_dialog.dart';
-import 'package:PiliPlus/plugin/pl_player/models/hwdec_type.dart';
-import 'package:PiliPlus/utils/storage.dart';
-import 'package:PiliPlus/utils/storage_key.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
-import 'package:PiliPlus/utils/video_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:piliplus/models/common/settings_type.dart';
+import 'package:piliplus/models/common/video/audio_quality.dart';
+import 'package:piliplus/models/common/video/cdn_type.dart';
+import 'package:piliplus/models/common/video/live_quality.dart';
+import 'package:piliplus/models/common/video/video_decode_type.dart';
+import 'package:piliplus/models/common/video/video_quality.dart';
+import 'package:piliplus/pages/setting/models/model.dart';
+import 'package:piliplus/pages/setting/widgets/ordered_multi_select_dialog.dart';
+import 'package:piliplus/pages/setting/widgets/select_dialog.dart';
+import 'package:piliplus/plugin/pl_player/models/hwdec_type.dart';
+import 'package:piliplus/utils/storage.dart';
+import 'package:piliplus/utils/storage_key.dart';
+import 'package:piliplus/utils/storage_pref.dart';
+import 'package:piliplus/utils/video_utils.dart';
 
 List<SettingsModel> get videoSettings => [
   const SettingsModel(

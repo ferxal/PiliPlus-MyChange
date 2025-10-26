@@ -1,12 +1,12 @@
-import 'package:PiliPlus/http/video.dart';
-import 'package:PiliPlus/models/common/settings_type.dart';
-import 'package:PiliPlus/pages/rcmd/controller.dart';
-import 'package:PiliPlus/pages/setting/models/model.dart';
-import 'package:PiliPlus/utils/recommend_filter.dart';
-import 'package:PiliPlus/utils/storage_key.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/video.dart';
+import 'package:piliplus/models/common/settings_type.dart';
+import 'package:piliplus/pages/rcmd/controller.dart';
+import 'package:piliplus/pages/setting/models/model.dart';
+import 'package:piliplus/utils/recommend_filter.dart';
+import 'package:piliplus/utils/storage_key.dart';
 
 List<SettingsModel> get recommendSettings => [
   const SettingsModel(

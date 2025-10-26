@@ -1,9 +1,9 @@
-import 'package:PiliPlus/grpc/bilibili/app/listener/v1.pb.dart' as audio;
-import 'package:PiliPlus/models/common/video/cdn_type.dart';
-import 'package:PiliPlus/models/video/play/url.dart';
-import 'package:PiliPlus/models_new/live/live_room_play_info/codec.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
+import 'package:piliplus/grpc/bilibili/app/listener/v1.pb.dart' as audio;
+import 'package:piliplus/models/common/video/cdn_type.dart';
+import 'package:piliplus/models/video/play/url.dart';
+import 'package:piliplus/models_new/live/live_room_play_info/codec.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 abstract final class VideoUtils {
   static String cdnService = Pref.defaultCDNService;

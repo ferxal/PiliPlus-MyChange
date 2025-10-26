@@ -1,11 +1,11 @@
-import 'package:PiliPlus/common/widgets/dyn/ink_well.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/stat/stat.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/models/common/stat_type.dart';
-import 'package:PiliPlus/models_new/space/space_opus/item.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
 import 'package:flutter/material.dart' hide InkWell;
+import 'package:piliplus/common/widgets/dyn/ink_well.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/stat/stat.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/models/common/stat_type.dart';
+import 'package:piliplus/models_new/space/space_opus/item.dart';
+import 'package:piliplus/utils/page_utils.dart';
 
 class SpaceOpusItem extends StatelessWidget {
   const SpaceOpusItem({

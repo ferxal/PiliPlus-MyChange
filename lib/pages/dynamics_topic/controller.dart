@@ -1,15 +1,15 @@
-import 'package:PiliPlus/http/dynamics.dart';
-import 'package:PiliPlus/http/fav.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_topic_feed/item.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_topic_feed/topic_card_list.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_topic_feed/topic_sort_by_conf.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_topic_top/top_details.dart';
-import 'package:PiliPlus/pages/common/common_list_controller.dart';
-import 'package:PiliPlus/services/account_service.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/dynamics.dart';
+import 'package:piliplus/http/fav.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/dynamic/dyn_topic_feed/item.dart';
+import 'package:piliplus/models_new/dynamic/dyn_topic_feed/topic_card_list.dart';
+import 'package:piliplus/models_new/dynamic/dyn_topic_feed/topic_sort_by_conf.dart';
+import 'package:piliplus/models_new/dynamic/dyn_topic_top/top_details.dart';
+import 'package:piliplus/pages/common/common_list_controller.dart';
+import 'package:piliplus/services/account_service.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class DynTopicController
     extends CommonListController<TopicCardList?, TopicCardItem> {

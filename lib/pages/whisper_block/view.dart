@@ -1,14 +1,14 @@
-import 'package:PiliPlus/common/widgets/dialog/dialog.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/grpc/bilibili/app/im/v1.pb.dart'
-    show KeywordBlockingItem;
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/pages/search/widgets/search_text.dart';
-import 'package:PiliPlus/pages/whisper_block/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show LengthLimitingTextInputFormatter;
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/dialog/dialog.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/grpc/bilibili/app/im/v1.pb.dart'
+    show KeywordBlockingItem;
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/pages/search/widgets/search_text.dart';
+import 'package:piliplus/pages/whisper_block/controller.dart';
 
 class WhisperBlockPage extends StatefulWidget {
   const WhisperBlockPage({

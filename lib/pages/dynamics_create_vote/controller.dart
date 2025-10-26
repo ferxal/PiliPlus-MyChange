@@ -1,13 +1,13 @@
-import 'package:PiliPlus/common/widgets/dialog/dialog.dart';
-import 'package:PiliPlus/http/dynamics.dart';
-import 'package:PiliPlus/http/msg.dart';
-import 'package:PiliPlus/models/dynamics/vote_model.dart';
-import 'package:PiliPlus/models_new/upload_bfs/data.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:piliplus/common/widgets/dialog/dialog.dart';
+import 'package:piliplus/http/dynamics.dart';
+import 'package:piliplus/http/msg.dart';
+import 'package:piliplus/models/dynamics/vote_model.dart';
+import 'package:piliplus/models_new/upload_bfs/data.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class CreateVoteController extends GetxController {
   CreateVoteController(this.voteId);

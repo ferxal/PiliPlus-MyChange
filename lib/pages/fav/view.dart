@@ -1,17 +1,17 @@
-import 'package:PiliPlus/common/widgets/scroll_physics.dart';
-import 'package:PiliPlus/common/widgets/view_safe_area.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/common/fav_type.dart';
-import 'package:PiliPlus/models_new/fav/fav_folder/list.dart';
-import 'package:PiliPlus/pages/fav/article/controller.dart';
-import 'package:PiliPlus/pages/fav/cheese/controller.dart';
-import 'package:PiliPlus/pages/fav/topic/controller.dart';
-import 'package:PiliPlus/pages/fav/video/controller.dart';
-import 'package:PiliPlus/pages/fav_folder_sort/view.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/scroll_physics.dart';
+import 'package:piliplus/common/widgets/view_safe_area.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/common/fav_type.dart';
+import 'package:piliplus/models_new/fav/fav_folder/list.dart';
+import 'package:piliplus/pages/fav/article/controller.dart';
+import 'package:piliplus/pages/fav/cheese/controller.dart';
+import 'package:piliplus/pages/fav/topic/controller.dart';
+import 'package:piliplus/pages/fav/video/controller.dart';
+import 'package:piliplus/pages/fav_folder_sort/view.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class FavPage extends StatefulWidget {
   const FavPage({super.key});

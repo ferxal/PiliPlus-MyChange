@@ -1,38 +1,38 @@
 import 'dart:math' show max;
 
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/button/icon_button.dart';
-import 'package:PiliPlus/common/widgets/button/toolbar_icon_button.dart';
-import 'package:PiliPlus/common/widgets/custom_icon.dart';
-import 'package:PiliPlus/common/widgets/draggable_sheet/draggable_scrollable_sheet_dyn.dart'
-    as dyn_sheet;
-import 'package:PiliPlus/common/widgets/pair.dart';
-import 'package:PiliPlus/common/widgets/text_field/controller.dart';
-import 'package:PiliPlus/common/widgets/text_field/text_field.dart';
-import 'package:PiliPlus/http/dynamics.dart';
-import 'package:PiliPlus/models/common/publish_panel_type.dart';
-import 'package:PiliPlus/models/common/reply/reply_option_type.dart';
-import 'package:PiliPlus/models/dynamics/vote_model.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_reserve_info/data.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_topic_top/topic_item.dart';
-import 'package:PiliPlus/pages/common/publish/common_rich_text_pub_page.dart';
-import 'package:PiliPlus/pages/dynamics_create_reserve/view.dart';
-import 'package:PiliPlus/pages/dynamics_create_vote/view.dart';
-import 'package:PiliPlus/pages/dynamics_mention/controller.dart';
-import 'package:PiliPlus/pages/dynamics_select_topic/controller.dart';
-import 'package:PiliPlus/pages/dynamics_select_topic/view.dart';
-import 'package:PiliPlus/pages/emote/controller.dart';
-import 'package:PiliPlus/pages/emote/view.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
-import 'package:PiliPlus/utils/date_utils.dart';
-import 'package:PiliPlus/utils/grid.dart';
-import 'package:PiliPlus/utils/request_utils.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart' hide DraggableScrollableSheet;
 import 'package:flutter/services.dart' show LengthLimitingTextInputFormatter;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart' hide ContextExtensionss;
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/button/icon_button.dart';
+import 'package:piliplus/common/widgets/button/toolbar_icon_button.dart';
+import 'package:piliplus/common/widgets/custom_icon.dart';
+import 'package:piliplus/common/widgets/draggable_sheet/draggable_scrollable_sheet_dyn.dart'
+    as dyn_sheet;
+import 'package:piliplus/common/widgets/pair.dart';
+import 'package:piliplus/common/widgets/text_field/controller.dart';
+import 'package:piliplus/common/widgets/text_field/text_field.dart';
+import 'package:piliplus/http/dynamics.dart';
+import 'package:piliplus/models/common/publish_panel_type.dart';
+import 'package:piliplus/models/common/reply/reply_option_type.dart';
+import 'package:piliplus/models/dynamics/vote_model.dart';
+import 'package:piliplus/models_new/dynamic/dyn_reserve_info/data.dart';
+import 'package:piliplus/models_new/dynamic/dyn_topic_top/topic_item.dart';
+import 'package:piliplus/pages/common/publish/common_rich_text_pub_page.dart';
+import 'package:piliplus/pages/dynamics_create_reserve/view.dart';
+import 'package:piliplus/pages/dynamics_create_vote/view.dart';
+import 'package:piliplus/pages/dynamics_mention/controller.dart';
+import 'package:piliplus/pages/dynamics_select_topic/controller.dart';
+import 'package:piliplus/pages/dynamics_select_topic/view.dart';
+import 'package:piliplus/pages/emote/controller.dart';
+import 'package:piliplus/pages/emote/view.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/context_ext.dart';
+import 'package:piliplus/utils/date_utils.dart';
+import 'package:piliplus/utils/grid.dart';
+import 'package:piliplus/utils/request_utils.dart';
 
 class CreateDynPanel extends CommonRichTextPubPage {
   const CreateDynPanel({

@@ -1,14 +1,14 @@
-import 'package:PiliPlus/common/widgets/scroll_physics.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/common/dynamic/dynamics_type.dart';
-import 'package:PiliPlus/models/common/dynamic/up_panel_position.dart';
-import 'package:PiliPlus/models/dynamics/up.dart';
-import 'package:PiliPlus/pages/dynamics/controller.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/up_panel.dart';
-import 'package:PiliPlus/pages/dynamics_create/view.dart';
-import 'package:PiliPlus/pages/dynamics_tab/view.dart';
 import 'package:flutter/material.dart' hide DraggableScrollableSheet;
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/scroll_physics.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/common/dynamic/dynamics_type.dart';
+import 'package:piliplus/models/common/dynamic/up_panel_position.dart';
+import 'package:piliplus/models/dynamics/up.dart';
+import 'package:piliplus/pages/dynamics/controller.dart';
+import 'package:piliplus/pages/dynamics/widgets/up_panel.dart';
+import 'package:piliplus/pages/dynamics_create/view.dart';
+import 'package:piliplus/pages/dynamics_tab/view.dart';
 
 class DynamicsPage extends StatefulWidget {
   const DynamicsPage({super.key});

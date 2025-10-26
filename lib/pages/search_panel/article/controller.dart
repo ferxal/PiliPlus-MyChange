@@ -1,12 +1,12 @@
 import 'dart:math';
 
-import 'package:PiliPlus/models/common/search/article_search_type.dart';
-import 'package:PiliPlus/models/search/result.dart';
-import 'package:PiliPlus/pages/search/widgets/search_text.dart';
-import 'package:PiliPlus/pages/search_panel/controller.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide ContextExtensionss;
+import 'package:piliplus/models/common/search/article_search_type.dart';
+import 'package:piliplus/models/search/result.dart';
+import 'package:piliplus/pages/search/widgets/search_text.dart';
+import 'package:piliplus/pages/search_panel/controller.dart';
+import 'package:piliplus/utils/context_ext.dart';
 
 class SearchArticleController
     extends SearchPanelController<SearchArticleData, SearchArticleItemModel> {

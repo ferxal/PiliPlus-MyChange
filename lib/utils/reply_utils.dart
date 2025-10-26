@@ -1,21 +1,21 @@
 import 'dart:convert' show jsonEncode;
 import 'dart:io' show Platform;
 
-import 'package:PiliPlus/grpc/bilibili/main/community/reply/v1.pb.dart'
-    show ReplyInfo;
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/reply.dart';
-import 'package:PiliPlus/models/common/reply/reply_sort_type.dart';
-import 'package:PiliPlus/models_new/reply/data.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/accounts/account.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/grpc/bilibili/main/community/reply/v1.pb.dart'
+    show ReplyInfo;
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/reply.dart';
+import 'package:piliplus/models/common/reply/reply_sort_type.dart';
+import 'package:piliplus/models_new/reply/data.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/accounts/account.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/id_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class ReplyUtils {
   static void onCheckReply({

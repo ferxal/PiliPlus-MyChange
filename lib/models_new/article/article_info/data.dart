@@ -1,6 +1,6 @@
-import 'package:PiliPlus/models_new/article/article_info/share_channel.dart';
-import 'package:PiliPlus/models_new/article/article_info/stats.dart';
-import 'package:PiliPlus/utils/extension.dart';
+import 'package:piliplus/models_new/article/article_info/share_channel.dart';
+import 'package:piliplus/models_new/article/article_info/stats.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class ArticleInfoData {
   int? like;

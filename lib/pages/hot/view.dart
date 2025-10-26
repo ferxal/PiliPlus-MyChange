@@ -1,19 +1,19 @@
-import 'package:PiliPlus/common/widgets/loading_widget/http_error.dart';
-import 'package:PiliPlus/common/widgets/refresh_indicator.dart';
-import 'package:PiliPlus/common/widgets/video_card/video_card_h.dart';
-import 'package:PiliPlus/common/widgets/view_safe_area.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/common/home_tab_type.dart';
-import 'package:PiliPlus/models/model_hot_video_item.dart';
-import 'package:PiliPlus/pages/common/common_page.dart';
-import 'package:PiliPlus/pages/home/controller.dart';
-import 'package:PiliPlus/pages/hot/controller.dart';
-import 'package:PiliPlus/pages/rank/view.dart';
-import 'package:PiliPlus/utils/grid.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/loading_widget/http_error.dart';
+import 'package:piliplus/common/widgets/refresh_indicator.dart';
+import 'package:piliplus/common/widgets/video_card/video_card_h.dart';
+import 'package:piliplus/common/widgets/view_safe_area.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/common/home_tab_type.dart';
+import 'package:piliplus/models/model_hot_video_item.dart';
+import 'package:piliplus/pages/common/common_page.dart';
+import 'package:piliplus/pages/home/controller.dart';
+import 'package:piliplus/pages/hot/controller.dart';
+import 'package:piliplus/pages/rank/view.dart';
+import 'package:piliplus/utils/grid.dart';
+import 'package:piliplus/utils/image_utils.dart';
 
 class HotPage extends StatefulWidget {
   const HotPage({super.key});

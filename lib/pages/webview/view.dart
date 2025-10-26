@@ -1,18 +1,18 @@
 import 'dart:io';
 
-import 'package:PiliPlus/http/ua_type.dart';
-import 'package:PiliPlus/main.dart';
-import 'package:PiliPlus/models/common/webview_menu_type.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/cache_manage.dart';
-import 'package:PiliPlus/utils/login_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/ua_type.dart';
+import 'package:piliplus/main.dart';
+import 'package:piliplus/models/common/webview_menu_type.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/cache_manage.dart';
+import 'package:piliplus/utils/login_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class WebviewPage extends StatefulWidget {
   const WebviewPage({super.key, this.url, this.oid, this.title, this.uaType});

@@ -1,5 +1,5 @@
-import 'package:PiliPlus/models_new/video/video_detail/section.dart';
-import 'package:PiliPlus/models_new/video/video_detail/stat.dart';
+import 'package:piliplus/models_new/video/video_detail/section.dart';
+import 'package:piliplus/models_new/video/video_detail/stat.dart';
 
 class UgcSeason {
   int? id;

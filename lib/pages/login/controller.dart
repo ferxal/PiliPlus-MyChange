@@ -1,24 +1,24 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/button/icon_button.dart';
-import 'package:PiliPlus/common/widgets/radio_widget.dart';
-import 'package:PiliPlus/http/init.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/login.dart';
-import 'package:PiliPlus/models/common/account_type.dart';
-import 'package:PiliPlus/models/login/model.dart';
-import 'package:PiliPlus/pages/login/geetest/geetest_webview_dialog.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/accounts/account.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:gt3_flutter_plugin/gt3_flutter_plugin.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/button/icon_button.dart';
+import 'package:piliplus/common/widgets/radio_widget.dart';
+import 'package:piliplus/http/init.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/login.dart';
+import 'package:piliplus/models/common/account_type.dart';
+import 'package:piliplus/models/login/model.dart';
+import 'package:piliplus/pages/login/geetest/geetest_webview_dialog.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/accounts/account.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class LoginPageController extends GetxController
     with GetSingleTickerProviderStateMixin {

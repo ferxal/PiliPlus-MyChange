@@ -1,7 +1,7 @@
-import 'package:PiliPlus/models/dynamics/result.dart' show ModuleBlocked;
-import 'package:PiliPlus/pages/article/widgets/opus_content.dart'
-    show moduleBlockedItem;
 import 'package:flutter/material.dart';
+import 'package:piliplus/models/dynamics/result.dart' show ModuleBlocked;
+import 'package:piliplus/pages/article/widgets/opus_content.dart'
+    show moduleBlockedItem;
 
 Widget blockedItem({
   required ThemeData theme,

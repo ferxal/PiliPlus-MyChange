@@ -1,7 +1,7 @@
-import 'package:PiliPlus/common/widgets/list_tile.dart';
-import 'package:PiliPlus/pages/setting/models/model.dart';
-import 'package:PiliPlus/pages/setting/models/recommend_settings.dart';
 import 'package:flutter/material.dart' hide ListTile;
+import 'package:piliplus/common/widgets/list_tile.dart';
+import 'package:piliplus/pages/setting/models/model.dart';
+import 'package:piliplus/pages/setting/models/recommend_settings.dart';
 
 class RecommendSetting extends StatefulWidget {
   const RecommendSetting({super.key, this.showAppBar = true});

@@ -1,10 +1,10 @@
-import 'package:PiliPlus/http/fav.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/fav/fav_folder/data.dart';
-import 'package:PiliPlus/models_new/fav/fav_folder/list.dart';
-import 'package:PiliPlus/pages/common/common_list_controller.dart';
-import 'package:PiliPlus/services/account_service.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/fav.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/fav/fav_folder/data.dart';
+import 'package:piliplus/models_new/fav/fav_folder/list.dart';
+import 'package:piliplus/pages/common/common_list_controller.dart';
+import 'package:piliplus/services/account_service.dart';
 
 class FavController extends CommonListController<FavFolderData, FavFolderInfo> {
   AccountService accountService = Get.find<AccountService>();

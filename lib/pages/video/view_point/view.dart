@@ -1,14 +1,14 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/button/icon_button.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/progress_bar/segment_progress_bar.dart';
-import 'package:PiliPlus/pages/common/slide/common_slide_page.dart';
-import 'package:PiliPlus/pages/video/controller.dart';
-import 'package:PiliPlus/plugin/pl_player/controller.dart';
-import 'package:PiliPlus/utils/duration_utils.dart';
 import 'package:extended_nested_scroll_view/extended_nested_scroll_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/button/icon_button.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/progress_bar/segment_progress_bar.dart';
+import 'package:piliplus/pages/common/slide/common_slide_page.dart';
+import 'package:piliplus/pages/video/controller.dart';
+import 'package:piliplus/plugin/pl_player/controller.dart';
+import 'package:piliplus/utils/duration_utils.dart';
 
 class ViewPointsPage extends CommonSlidePage {
   const ViewPointsPage({

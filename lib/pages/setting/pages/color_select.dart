@@ -1,17 +1,17 @@
-import 'package:PiliPlus/common/widgets/color_palette.dart';
-import 'package:PiliPlus/models/common/nav_bar_config.dart';
-import 'package:PiliPlus/models/common/theme/theme_color_type.dart';
-import 'package:PiliPlus/models/common/theme/theme_type.dart';
-import 'package:PiliPlus/pages/home/view.dart';
-import 'package:PiliPlus/pages/mine/controller.dart';
-import 'package:PiliPlus/pages/setting/widgets/select_dialog.dart';
-import 'package:PiliPlus/utils/storage.dart';
-import 'package:PiliPlus/utils/storage_key.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
 import 'package:flex_seed_scheme/flex_seed_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
+import 'package:piliplus/common/widgets/color_palette.dart';
+import 'package:piliplus/models/common/nav_bar_config.dart';
+import 'package:piliplus/models/common/theme/theme_color_type.dart';
+import 'package:piliplus/models/common/theme/theme_type.dart';
+import 'package:piliplus/pages/home/view.dart';
+import 'package:piliplus/pages/mine/controller.dart';
+import 'package:piliplus/pages/setting/widgets/select_dialog.dart';
+import 'package:piliplus/utils/storage.dart';
+import 'package:piliplus/utils/storage_key.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 class ColorSelectPage extends StatefulWidget {
   const ColorSelectPage({super.key});

@@ -1,6 +1,6 @@
-import 'package:PiliPlus/models_new/article/article_list/category.dart';
-import 'package:PiliPlus/models_new/article/article_list/stats.dart';
-import 'package:PiliPlus/utils/extension.dart';
+import 'package:piliplus/models_new/article/article_list/category.dart';
+import 'package:piliplus/models_new/article/article_list/stats.dart';
+import 'package:piliplus/utils/extension.dart';
 
 class ArticleListItemModel {
   int? id;

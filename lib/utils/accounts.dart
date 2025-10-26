@@ -1,9 +1,9 @@
-import 'package:PiliPlus/http/init.dart';
-import 'package:PiliPlus/models/common/account_type.dart';
-import 'package:PiliPlus/pages/mine/controller.dart';
-import 'package:PiliPlus/utils/accounts/account.dart';
-import 'package:PiliPlus/utils/login_utils.dart';
 import 'package:hive/hive.dart';
+import 'package:piliplus/http/init.dart';
+import 'package:piliplus/models/common/account_type.dart';
+import 'package:piliplus/pages/mine/controller.dart';
+import 'package:piliplus/utils/accounts/account.dart';
+import 'package:piliplus/utils/login_utils.dart';
 
 abstract class Accounts {
   static late final Box<LoginAccount> account;

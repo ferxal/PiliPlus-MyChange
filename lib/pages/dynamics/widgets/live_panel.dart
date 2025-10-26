@@ -1,6 +1,6 @@
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/models/dynamics/result.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/models/dynamics/result.dart';
 
 Widget livePanel(
   BuildContext context, {

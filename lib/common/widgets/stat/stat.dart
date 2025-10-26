@@ -1,6 +1,6 @@
-import 'package:PiliPlus/models/common/stat_type.dart';
-import 'package:PiliPlus/utils/num_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/models/common/stat_type.dart';
+import 'package:piliplus/utils/num_utils.dart';
 
 class StatWidget extends StatelessWidget {
   final StatType type;

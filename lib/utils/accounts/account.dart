@@ -1,9 +1,9 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/models/common/account_type.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:hive/hive.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/models/common/account_type.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/id_utils.dart';
 
 sealed class Account {
   Map<String, dynamic>? toJson() => null;

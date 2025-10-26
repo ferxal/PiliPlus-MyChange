@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/utils/extension.dart';
 import 'package:easy_debounce/easy_throttle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/utils/extension.dart';
 
 mixin ScrollOrRefreshMixin {
   ScrollController get scrollController;

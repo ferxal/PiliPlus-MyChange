@@ -1,21 +1,21 @@
-import 'package:PiliPlus/http/dynamics.dart';
-import 'package:PiliPlus/http/fav.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/video.dart';
-import 'package:PiliPlus/models/dynamics/article_content_model.dart'
-    show ArticleContentModel;
-import 'package:PiliPlus/models/dynamics/result.dart';
-import 'package:PiliPlus/models/model_avatar.dart';
-import 'package:PiliPlus/models_new/article/article_info/data.dart';
-import 'package:PiliPlus/models_new/article/article_view/data.dart';
-import 'package:PiliPlus/pages/common/dyn/common_dyn_controller.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
-import 'package:PiliPlus/utils/url_utils.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/http/dynamics.dart';
+import 'package:piliplus/http/fav.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/video.dart';
+import 'package:piliplus/models/dynamics/article_content_model.dart'
+    show ArticleContentModel;
+import 'package:piliplus/models/dynamics/result.dart';
+import 'package:piliplus/models/model_avatar.dart';
+import 'package:piliplus/models_new/article/article_info/data.dart';
+import 'package:piliplus/models_new/article/article_view/data.dart';
+import 'package:piliplus/pages/common/dyn/common_dyn_controller.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/storage_pref.dart';
+import 'package:piliplus/utils/url_utils.dart';
 
 class ArticleController extends CommonDynController {
   late String id;

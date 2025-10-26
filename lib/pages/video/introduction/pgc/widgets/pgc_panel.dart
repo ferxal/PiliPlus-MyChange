@@ -1,16 +1,16 @@
 import 'dart:async';
 
-import 'package:PiliPlus/models_new/pgc/pgc_info_model/episode.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_info_model/new_ep.dart';
-import 'package:PiliPlus/models_new/video/video_detail/episode.dart'
-    hide EpisodeItem;
-import 'package:PiliPlus/pages/video/controller.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models_new/pgc/pgc_info_model/episode.dart';
+import 'package:piliplus/models_new/pgc/pgc_info_model/new_ep.dart';
+import 'package:piliplus/models_new/video/video_detail/episode.dart'
+    hide EpisodeItem;
+import 'package:piliplus/pages/video/controller.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/storage_pref.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class PgcPanel extends StatefulWidget {
   const PgcPanel({

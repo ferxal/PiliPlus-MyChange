@@ -1,28 +1,28 @@
 import 'dart:math';
 
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/dialog/report.dart';
-import 'package:PiliPlus/common/widgets/dyn/ink_well.dart';
-import 'package:PiliPlus/common/widgets/pendant_avatar.dart';
-import 'package:PiliPlus/http/constants.dart';
-import 'package:PiliPlus/http/user.dart';
-import 'package:PiliPlus/http/video.dart';
-import 'package:PiliPlus/models/dynamics/result.dart';
-import 'package:PiliPlus/pages/dynamics/controller.dart';
-import 'package:PiliPlus/pages/save_panel/view.dart';
-import 'package:PiliPlus/utils/accounts.dart';
-import 'package:PiliPlus/utils/context_ext.dart';
-import 'package:PiliPlus/utils/date_utils.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/feed_back.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/request_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart' hide InkWell;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart' hide ContextExtensionss;
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/dialog/report.dart';
+import 'package:piliplus/common/widgets/dyn/ink_well.dart';
+import 'package:piliplus/common/widgets/pendant_avatar.dart';
+import 'package:piliplus/http/constants.dart';
+import 'package:piliplus/http/user.dart';
+import 'package:piliplus/http/video.dart';
+import 'package:piliplus/models/dynamics/result.dart';
+import 'package:piliplus/pages/dynamics/controller.dart';
+import 'package:piliplus/pages/save_panel/view.dart';
+import 'package:piliplus/utils/accounts.dart';
+import 'package:piliplus/utils/context_ext.dart';
+import 'package:piliplus/utils/date_utils.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/feed_back.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/request_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class AuthorPanel extends StatelessWidget {
   final DynamicItemModel item;

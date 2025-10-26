@@ -1,6 +1,6 @@
-import 'package:PiliPlus/plugin/pl_player/controller.dart';
-import 'package:PiliPlus/plugin/pl_player/models/play_status.dart';
 import 'package:audio_session/audio_session.dart';
+import 'package:piliplus/plugin/pl_player/controller.dart';
+import 'package:piliplus/plugin/pl_player/models/play_status.dart';
 
 class AudioSessionHandler {
   late AudioSession session;

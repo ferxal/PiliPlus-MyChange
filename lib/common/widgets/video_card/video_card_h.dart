@@ -1,22 +1,22 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/badge.dart';
-import 'package:PiliPlus/common/widgets/image/image_save.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/progress_bar/video_progress_indicator.dart';
-import 'package:PiliPlus/common/widgets/stat/stat.dart';
-import 'package:PiliPlus/common/widgets/video_popup_menu.dart';
-import 'package:PiliPlus/http/search.dart';
-import 'package:PiliPlus/models/common/badge_type.dart';
-import 'package:PiliPlus/models/common/stat_type.dart';
-import 'package:PiliPlus/models/model_hot_video_item.dart';
-import 'package:PiliPlus/models/model_video.dart';
-import 'package:PiliPlus/models/search/result.dart';
-import 'package:PiliPlus/utils/date_utils.dart';
-import 'package:PiliPlus/utils/duration_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/badge.dart';
+import 'package:piliplus/common/widgets/image/image_save.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/progress_bar/video_progress_indicator.dart';
+import 'package:piliplus/common/widgets/stat/stat.dart';
+import 'package:piliplus/common/widgets/video_popup_menu.dart';
+import 'package:piliplus/http/search.dart';
+import 'package:piliplus/models/common/badge_type.dart';
+import 'package:piliplus/models/common/stat_type.dart';
+import 'package:piliplus/models/model_hot_video_item.dart';
+import 'package:piliplus/models/model_video.dart';
+import 'package:piliplus/models/search/result.dart';
+import 'package:piliplus/utils/date_utils.dart';
+import 'package:piliplus/utils/duration_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 // 视频卡片 - 水平布局
 class VideoCardH extends StatelessWidget {

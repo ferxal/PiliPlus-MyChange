@@ -1,22 +1,5 @@
 import 'dart:io';
 
-import 'package:PiliPlus/common/widgets/button/icon_button.dart';
-import 'package:PiliPlus/common/widgets/button/toolbar_icon_button.dart';
-import 'package:PiliPlus/common/widgets/text_field/controller.dart';
-import 'package:PiliPlus/common/widgets/text_field/text_field.dart';
-import 'package:PiliPlus/http/msg.dart';
-import 'package:PiliPlus/models/common/image_preview_type.dart';
-import 'package:PiliPlus/models/common/publish_panel_type.dart';
-import 'package:PiliPlus/models_new/dynamic/dyn_mention/item.dart';
-import 'package:PiliPlus/models_new/emote/emote.dart' as e;
-import 'package:PiliPlus/models_new/live/live_emote/emoticon.dart';
-import 'package:PiliPlus/models_new/upload_bfs/data.dart';
-import 'package:PiliPlus/pages/common/publish/common_publish_page.dart';
-import 'package:PiliPlus/pages/dynamics_mention/view.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/feed_back.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:dio/dio.dart' show CancelToken;
 import 'package:easy_debounce/easy_throttle.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +8,23 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:piliplus/common/widgets/button/icon_button.dart';
+import 'package:piliplus/common/widgets/button/toolbar_icon_button.dart';
+import 'package:piliplus/common/widgets/text_field/controller.dart';
+import 'package:piliplus/common/widgets/text_field/text_field.dart';
+import 'package:piliplus/http/msg.dart';
+import 'package:piliplus/models/common/image_preview_type.dart';
+import 'package:piliplus/models/common/publish_panel_type.dart';
+import 'package:piliplus/models_new/dynamic/dyn_mention/item.dart';
+import 'package:piliplus/models_new/emote/emote.dart' as e;
+import 'package:piliplus/models_new/live/live_emote/emoticon.dart';
+import 'package:piliplus/models_new/upload_bfs/data.dart';
+import 'package:piliplus/pages/common/publish/common_publish_page.dart';
+import 'package:piliplus/pages/dynamics_mention/view.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/feed_back.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 abstract class CommonRichTextPubPage
     extends CommonPublishPage<List<RichTextItem>> {

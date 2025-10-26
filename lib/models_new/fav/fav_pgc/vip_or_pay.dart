@@ -1,4 +1,4 @@
-import 'package:PiliPlus/models_new/fav/fav_pgc/multi_img.dart';
+import 'package:piliplus/models_new/fav/fav_pgc/multi_img.dart';
 
 class VipOrPay {
   String? text;

@@ -1,8 +1,8 @@
-import 'package:PiliPlus/models_new/search/search_trending/list.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:piliplus/models_new/search/search_trending/list.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/image_utils.dart';
 
 class HotKeyword extends StatelessWidget {
   final double width;

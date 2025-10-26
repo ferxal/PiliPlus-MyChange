@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:PiliPlus/models_new/video/video_detail/data.dart';
-import 'package:PiliPlus/models_new/video/video_detail/episode.dart';
-import 'package:PiliPlus/models_new/video/video_detail/section.dart';
-import 'package:PiliPlus/pages/video/controller.dart';
-import 'package:PiliPlus/pages/video/introduction/ugc/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models_new/video/video_detail/data.dart';
+import 'package:piliplus/models_new/video/video_detail/episode.dart';
+import 'package:piliplus/models_new/video/video_detail/section.dart';
+import 'package:piliplus/pages/video/controller.dart';
+import 'package:piliplus/pages/video/introduction/ugc/controller.dart';
 
 // TODO refa
 class SeasonPanel extends StatefulWidget {

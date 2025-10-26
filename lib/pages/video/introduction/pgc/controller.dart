@@ -1,38 +1,38 @@
 import 'dart:async';
 import 'dart:math' show max;
 
-import 'package:PiliPlus/grpc/bilibili/app/viewunite/pgcanymodel.pb.dart'
-    show ViewPgcAny;
-import 'package:PiliPlus/grpc/view.dart';
-import 'package:PiliPlus/http/constants.dart';
-import 'package:PiliPlus/http/fav.dart';
-import 'package:PiliPlus/http/search.dart';
-import 'package:PiliPlus/http/video.dart';
-import 'package:PiliPlus/models/common/video/source_type.dart';
-import 'package:PiliPlus/models/common/video/video_type.dart';
-import 'package:PiliPlus/models/pgc_lcf.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_info_model/episode.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_info_model/result.dart';
-import 'package:PiliPlus/models_new/triple/pgc_triple.dart';
-import 'package:PiliPlus/models_new/video/video_detail/episode.dart'
-    hide EpisodeItem;
-import 'package:PiliPlus/models_new/video/video_detail/stat_detail.dart';
-import 'package:PiliPlus/pages/common/common_intro_controller.dart';
-import 'package:PiliPlus/pages/dynamics_repost/view.dart';
-import 'package:PiliPlus/pages/video/controller.dart';
-import 'package:PiliPlus/pages/video/pay_coins/view.dart';
-import 'package:PiliPlus/pages/video/reply/controller.dart';
-import 'package:PiliPlus/plugin/pl_player/models/play_repeat.dart';
-import 'package:PiliPlus/services/service_locator.dart';
-import 'package:PiliPlus/utils/feed_back.dart';
-import 'package:PiliPlus/utils/global_data.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/grpc/bilibili/app/viewunite/pgcanymodel.pb.dart'
+    show ViewPgcAny;
+import 'package:piliplus/grpc/view.dart';
+import 'package:piliplus/http/constants.dart';
+import 'package:piliplus/http/fav.dart';
+import 'package:piliplus/http/search.dart';
+import 'package:piliplus/http/video.dart';
+import 'package:piliplus/models/common/video/source_type.dart';
+import 'package:piliplus/models/common/video/video_type.dart';
+import 'package:piliplus/models/pgc_lcf.dart';
+import 'package:piliplus/models_new/pgc/pgc_info_model/episode.dart';
+import 'package:piliplus/models_new/pgc/pgc_info_model/result.dart';
+import 'package:piliplus/models_new/triple/pgc_triple.dart';
+import 'package:piliplus/models_new/video/video_detail/episode.dart'
+    hide EpisodeItem;
+import 'package:piliplus/models_new/video/video_detail/stat_detail.dart';
+import 'package:piliplus/pages/common/common_intro_controller.dart';
+import 'package:piliplus/pages/dynamics_repost/view.dart';
+import 'package:piliplus/pages/video/controller.dart';
+import 'package:piliplus/pages/video/pay_coins/view.dart';
+import 'package:piliplus/pages/video/reply/controller.dart';
+import 'package:piliplus/plugin/pl_player/models/play_repeat.dart';
+import 'package:piliplus/services/service_locator.dart';
+import 'package:piliplus/utils/feed_back.dart';
+import 'package:piliplus/utils/global_data.dart';
+import 'package:piliplus/utils/id_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class PgcIntroController extends CommonIntroController {
   int? seasonId;

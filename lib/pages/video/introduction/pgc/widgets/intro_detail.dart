@@ -1,18 +1,18 @@
-import 'package:PiliPlus/common/widgets/keep_alive_wrapper.dart';
-import 'package:PiliPlus/common/widgets/page/tabs.dart';
-import 'package:PiliPlus/common/widgets/scroll_physics.dart';
-import 'package:PiliPlus/common/widgets/stat/stat.dart';
-import 'package:PiliPlus/models/common/stat_type.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_info_model/result.dart';
-import 'package:PiliPlus/models_new/video/video_tag/data.dart';
-import 'package:PiliPlus/pages/common/slide/common_slide_page.dart';
-import 'package:PiliPlus/pages/pgc_review/view.dart';
-import 'package:PiliPlus/pages/search/widgets/search_text.dart';
-import 'package:PiliPlus/pages/video/introduction/ugc/widgets/selectable_text.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart' hide TabBarView;
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/keep_alive_wrapper.dart';
+import 'package:piliplus/common/widgets/page/tabs.dart';
+import 'package:piliplus/common/widgets/scroll_physics.dart';
+import 'package:piliplus/common/widgets/stat/stat.dart';
+import 'package:piliplus/models/common/stat_type.dart';
+import 'package:piliplus/models_new/pgc/pgc_info_model/result.dart';
+import 'package:piliplus/models_new/video/video_tag/data.dart';
+import 'package:piliplus/pages/common/slide/common_slide_page.dart';
+import 'package:piliplus/pages/pgc_review/view.dart';
+import 'package:piliplus/pages/search/widgets/search_text.dart';
+import 'package:piliplus/pages/video/introduction/ugc/widgets/selectable_text.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class PgcIntroPanel extends CommonSlidePage {
   final PgcInfoModel item;

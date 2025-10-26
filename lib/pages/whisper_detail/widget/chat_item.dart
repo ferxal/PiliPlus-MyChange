@@ -1,27 +1,27 @@
 import 'dart:convert';
 
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/badge.dart';
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/grpc/bilibili/im/interfaces/v1.pb.dart'
-    show EmotionInfo;
-import 'package:PiliPlus/grpc/bilibili/im/type.pb.dart' show Msg, MsgType;
-import 'package:PiliPlus/http/search.dart';
-import 'package:PiliPlus/models/common/badge_type.dart';
-import 'package:PiliPlus/models/common/image_preview_type.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/utils/app_scheme.dart';
-import 'package:PiliPlus/utils/date_utils.dart';
-import 'package:PiliPlus/utils/duration_utils.dart';
-import 'package:PiliPlus/utils/id_utils.dart';
-import 'package:PiliPlus/utils/image_utils.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/badge.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/grpc/bilibili/im/interfaces/v1.pb.dart'
+    show EmotionInfo;
+import 'package:piliplus/grpc/bilibili/im/type.pb.dart' show Msg, MsgType;
+import 'package:piliplus/http/search.dart';
+import 'package:piliplus/models/common/badge_type.dart';
+import 'package:piliplus/models/common/image_preview_type.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/utils/app_scheme.dart';
+import 'package:piliplus/utils/date_utils.dart';
+import 'package:piliplus/utils/duration_utils.dart';
+import 'package:piliplus/utils/id_utils.dart';
+import 'package:piliplus/utils/image_utils.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class ChatItem extends StatelessWidget {
   static MsgType msgTypeFromValue(int value) {
@@ -643,23 +643,33 @@ class ChatItem extends StatelessWidget {
       patterns.addAll(emojiMap.keys.map(RegExp.escape));
     }
     String _processReceiveContent(String content) {
+    if (!content.startsWith('\uFFFF')) {
+      return content;
+    }
+    content = content.substring(1);
     final regex = RegExp(patterns.join('|'));
-    final buffer = StringBuffer();
-    content.splitMapJoin(regex, onMatch: (match) {
-      buffer.write(match.group(0));
-      return '';
-    }, onNonMatch: (nonMatch) {
-      buffer.write(nonMatch.runes.map((rune) {
-        int newRune = rune - 10;
-        if (newRune < 0) newRune += 0x110000;
-        return String.fromCharCode(newRune);
-      }).join());
-      return '';
-    });
-    return buffer.toString();
-  }
+      final buffer = StringBuffer();
+      content.splitMapJoin(
+        regex,
+        onMatch: (match) {
+          buffer.write(match.group(0));
+          return '';
+        },
+        onNonMatch: (nonMatch) {
+          buffer.write(
+            nonMatch.runes.map((rune) {
+              int newRune = rune - 10;
+              if (newRune < 0) newRune += 0x110000;
+              return String.fromCharCode(newRune);
+            }).join(),
+          );
+          return '';
+        },
+      );
+      return buffer.toString();
+    }
 
-  final regex = RegExp(patterns.join('|'));
+    final regex = RegExp(patterns.join('|'));
     _processReceiveContent(content['content']).splitMapJoin(
       regex,
       onMatch: (Match match) {

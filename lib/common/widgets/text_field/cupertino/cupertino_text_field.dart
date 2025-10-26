@@ -7,13 +7,6 @@ library;
 
 import 'dart:ui' as ui show BoxHeightStyle, BoxWidthStyle;
 
-import 'package:PiliPlus/common/widgets/text_field/controller.dart';
-import 'package:PiliPlus/common/widgets/text_field/cupertino/cupertino_adaptive_text_selection_toolbar.dart';
-import 'package:PiliPlus/common/widgets/text_field/cupertino/cupertino_spell_check_suggestions_toolbar.dart';
-import 'package:PiliPlus/common/widgets/text_field/editable_text.dart';
-import 'package:PiliPlus/common/widgets/text_field/spell_check.dart';
-import 'package:PiliPlus/common/widgets/text_field/system_context_menu.dart';
-import 'package:PiliPlus/common/widgets/text_field/text_selection.dart';
 import 'package:flutter/cupertino.dart'
     hide
         SpellCheckConfiguration,
@@ -30,6 +23,13 @@ import 'package:flutter/foundation.dart' show defaultTargetPlatform;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:piliplus/common/widgets/text_field/controller.dart';
+import 'package:piliplus/common/widgets/text_field/cupertino/cupertino_adaptive_text_selection_toolbar.dart';
+import 'package:piliplus/common/widgets/text_field/cupertino/cupertino_spell_check_suggestions_toolbar.dart';
+import 'package:piliplus/common/widgets/text_field/editable_text.dart';
+import 'package:piliplus/common/widgets/text_field/spell_check.dart';
+import 'package:piliplus/common/widgets/text_field/system_context_menu.dart';
+import 'package:piliplus/common/widgets/text_field/text_selection.dart';
 
 export 'package:flutter/services.dart'
     show

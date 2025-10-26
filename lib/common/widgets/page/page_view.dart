@@ -10,10 +10,10 @@
 /// @docImport 'text.dart';
 library;
 
-import 'package:PiliPlus/common/widgets/page/scrollable.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
 import 'package:flutter/material.dart' hide Scrollable, ScrollableState;
 import 'package:flutter/rendering.dart';
+import 'package:piliplus/common/widgets/page/scrollable.dart';
 
 class _ForceImplicitScrollPhysics extends ScrollPhysics {
   const _ForceImplicitScrollPhysics({

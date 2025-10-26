@@ -1,12 +1,12 @@
-import 'package:PiliPlus/common/widgets/dyn/ink_well.dart';
-import 'package:PiliPlus/common/widgets/image/image_save.dart';
-import 'package:PiliPlus/models/dynamics/result.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/action_panel.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/author_panel.dart';
-import 'package:PiliPlus/pages/dynamics/widgets/dyn_content.dart';
-import 'package:PiliPlus/utils/page_utils.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart' hide InkWell;
+import 'package:piliplus/common/widgets/dyn/ink_well.dart';
+import 'package:piliplus/common/widgets/image/image_save.dart';
+import 'package:piliplus/models/dynamics/result.dart';
+import 'package:piliplus/pages/dynamics/widgets/action_panel.dart';
+import 'package:piliplus/pages/dynamics/widgets/author_panel.dart';
+import 'package:piliplus/pages/dynamics/widgets/dyn_content.dart';
+import 'package:piliplus/utils/page_utils.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class DynamicPanel extends StatelessWidget {
   final DynamicItemModel item;

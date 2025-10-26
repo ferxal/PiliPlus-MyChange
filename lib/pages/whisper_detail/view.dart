@@ -1,27 +1,27 @@
 import 'dart:async';
 
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/common/widgets/text_field/text_field.dart';
-import 'package:PiliPlus/grpc/bilibili/im/type.pb.dart' show Msg;
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/msg.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/models/common/publish_panel_type.dart';
-import 'package:PiliPlus/models_new/upload_bfs/data.dart';
-import 'package:PiliPlus/pages/common/publish/common_rich_text_pub_page.dart';
-import 'package:PiliPlus/pages/emote/view.dart';
-import 'package:PiliPlus/pages/whisper_detail/controller.dart';
-import 'package:PiliPlus/pages/whisper_detail/widget/chat_item.dart';
-import 'package:PiliPlus/pages/whisper_link_setting/view.dart';
-import 'package:PiliPlus/utils/extension.dart';
-import 'package:PiliPlus/utils/feed_back.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart' hide TextField;
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mime/mime.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/common/widgets/text_field/text_field.dart';
+import 'package:piliplus/grpc/bilibili/im/type.pb.dart' show Msg;
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/msg.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/models/common/publish_panel_type.dart';
+import 'package:piliplus/models_new/upload_bfs/data.dart';
+import 'package:piliplus/pages/common/publish/common_rich_text_pub_page.dart';
+import 'package:piliplus/pages/emote/view.dart';
+import 'package:piliplus/pages/whisper_detail/controller.dart';
+import 'package:piliplus/pages/whisper_detail/widget/chat_item.dart';
+import 'package:piliplus/pages/whisper_link_setting/view.dart';
+import 'package:piliplus/utils/extension.dart';
+import 'package:piliplus/utils/feed_back.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class WhisperDetailPage extends CommonRichTextPubPage {
   const WhisperDetailPage({

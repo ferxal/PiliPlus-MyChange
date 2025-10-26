@@ -1,15 +1,15 @@
 import 'dart:math' as math;
 import 'dart:ui';
 
-import 'package:PiliPlus/common/widgets/text_field/controller.dart';
-import 'package:PiliPlus/common/widgets/text_field/editable.dart';
-import 'package:PiliPlus/common/widgets/text_field/editable_text.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart' show kMinInteractiveDimension;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart' hide EditableText, EditableTextState;
+import 'package:piliplus/common/widgets/text_field/controller.dart';
+import 'package:piliplus/common/widgets/text_field/editable.dart';
+import 'package:piliplus/common/widgets/text_field/editable_text.dart';
 
 abstract class TextSelectionGestureDetectorBuilderDelegate {
   /// [GlobalKey] to the [EditableText] for which the

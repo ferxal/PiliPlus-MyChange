@@ -1,22 +1,22 @@
-import 'package:PiliPlus/common/widgets/text_field/controller.dart';
-import 'package:PiliPlus/grpc/bilibili/main/community/reply/v1.pb.dart'
-    show MainListReply, ReplyInfo, SubjectControl, Mode, EditorIconState;
-import 'package:PiliPlus/grpc/bilibili/pagination.pb.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/http/reply.dart';
-import 'package:PiliPlus/models/common/reply/reply_sort_type.dart';
-import 'package:PiliPlus/pages/common/common_list_controller.dart';
-import 'package:PiliPlus/pages/video/reply_new/view.dart';
-import 'package:PiliPlus/utils/feed_back.dart';
-import 'package:PiliPlus/utils/reply_utils.dart';
-import 'package:PiliPlus/utils/request_utils.dart';
-import 'package:PiliPlus/utils/storage_pref.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:fixnum/fixnum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/dialog/dialog_route.dart';
+import 'package:piliplus/common/widgets/text_field/controller.dart';
+import 'package:piliplus/grpc/bilibili/main/community/reply/v1.pb.dart'
+    show MainListReply, ReplyInfo, SubjectControl, Mode, EditorIconState;
+import 'package:piliplus/grpc/bilibili/pagination.pb.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/http/reply.dart';
+import 'package:piliplus/models/common/reply/reply_sort_type.dart';
+import 'package:piliplus/pages/common/common_list_controller.dart';
+import 'package:piliplus/pages/video/reply_new/view.dart';
+import 'package:piliplus/utils/feed_back.dart';
+import 'package:piliplus/utils/reply_utils.dart';
+import 'package:piliplus/utils/request_utils.dart';
+import 'package:piliplus/utils/storage_pref.dart';
+import 'package:piliplus/utils/utils.dart';
 
 abstract class ReplyController<R> extends CommonListController<R, ReplyInfo> {
   final RxInt count = (-1).obs;

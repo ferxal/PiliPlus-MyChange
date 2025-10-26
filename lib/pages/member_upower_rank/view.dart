@@ -1,16 +1,16 @@
-import 'package:PiliPlus/common/widgets/image/network_img_layer.dart';
-import 'package:PiliPlus/common/widgets/keep_alive_wrapper.dart';
-import 'package:PiliPlus/common/widgets/list_tile.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/http_error.dart';
-import 'package:PiliPlus/common/widgets/refresh_indicator.dart';
-import 'package:PiliPlus/common/widgets/scroll_physics.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models/common/image_type.dart';
-import 'package:PiliPlus/models_new/upower_rank/rank_info.dart';
-import 'package:PiliPlus/pages/member_upower_rank/controller.dart';
-import 'package:PiliPlus/utils/utils.dart';
 import 'package:flutter/material.dart' hide ListTile;
 import 'package:get/get.dart';
+import 'package:piliplus/common/widgets/image/network_img_layer.dart';
+import 'package:piliplus/common/widgets/keep_alive_wrapper.dart';
+import 'package:piliplus/common/widgets/list_tile.dart';
+import 'package:piliplus/common/widgets/loading_widget/http_error.dart';
+import 'package:piliplus/common/widgets/refresh_indicator.dart';
+import 'package:piliplus/common/widgets/scroll_physics.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models/common/image_type.dart';
+import 'package:piliplus/models_new/upower_rank/rank_info.dart';
+import 'package:piliplus/pages/member_upower_rank/controller.dart';
+import 'package:piliplus/utils/utils.dart';
 
 class UpowerRankPage extends StatefulWidget {
   const UpowerRankPage({super.key, this.upMid, this.tag, this.privilegeType});

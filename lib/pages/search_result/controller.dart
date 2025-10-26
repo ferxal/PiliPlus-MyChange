@@ -1,5 +1,5 @@
-import 'package:PiliPlus/models/common/search/search_type.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/models/common/search/search_type.dart';
 
 class SearchResultController extends GetxController {
   String keyword = Get.parameters['keyword'] ?? '';

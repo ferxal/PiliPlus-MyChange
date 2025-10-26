@@ -1,18 +1,18 @@
-import 'package:PiliPlus/common/constants.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/http_error.dart';
-import 'package:PiliPlus/common/widgets/loading_widget/loading_widget.dart';
-import 'package:PiliPlus/common/widgets/self_sized_horizontal_list.dart';
-import 'package:PiliPlus/http/loading_state.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_index_condition/data.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_index_condition/sort.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_index_condition/value.dart';
-import 'package:PiliPlus/models_new/pgc/pgc_index_result/list.dart';
-import 'package:PiliPlus/pages/pgc_index/controller.dart';
-import 'package:PiliPlus/pages/pgc_index/widgets/pgc_card_v_pgc_index.dart';
-import 'package:PiliPlus/pages/search/widgets/search_text.dart';
-import 'package:PiliPlus/utils/grid.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:piliplus/common/constants.dart';
+import 'package:piliplus/common/widgets/loading_widget/http_error.dart';
+import 'package:piliplus/common/widgets/loading_widget/loading_widget.dart';
+import 'package:piliplus/common/widgets/self_sized_horizontal_list.dart';
+import 'package:piliplus/http/loading_state.dart';
+import 'package:piliplus/models_new/pgc/pgc_index_condition/data.dart';
+import 'package:piliplus/models_new/pgc/pgc_index_condition/sort.dart';
+import 'package:piliplus/models_new/pgc/pgc_index_condition/value.dart';
+import 'package:piliplus/models_new/pgc/pgc_index_result/list.dart';
+import 'package:piliplus/pages/pgc_index/controller.dart';
+import 'package:piliplus/pages/pgc_index/widgets/pgc_card_v_pgc_index.dart';
+import 'package:piliplus/pages/search/widgets/search_text.dart';
+import 'package:piliplus/utils/grid.dart';
 
 class PgcIndexPage extends StatefulWidget {
   const PgcIndexPage({super.key, this.indexType});
