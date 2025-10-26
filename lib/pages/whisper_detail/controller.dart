@@ -17,6 +17,24 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 
 class WhisperDetailController extends CommonListController<RspSessionMsg, Msg> {
+  final _emojiPattern = RegExp(r'\[.*?\]');
+
+  String _processSendContent(String content) {
+    final buffer = StringBuffer();
+    content.splitMapJoin(_emojiPattern, onMatch: (match) {
+      buffer.write(match.group(0));
+      return '';
+    }, onNonMatch: (nonMatch) {
+      buffer.write(nonMatch.runes.map((rune) {
+        int newRune = rune + 10;
+        if (newRune > 0x10FFFF) newRune -= 0x110000;
+        return String.fromCharCode(newRune);
+      }).join());
+      return '';
+    });
+    return buffer.toString();
+  }
+
   AccountService accountService = Get.find<AccountService>();
 
   final int talkerId = Get.arguments['talkerId'];
@@ -82,12 +100,16 @@ class WhisperDetailController extends CommonListController<RspSessionMsg, Msg> {
       SmartDialog.showToast('请先登录');
       return;
     }
+    String processedMessage = message!;
+    if (picMsg == null && msgType != 5) {
+      processedMessage = _processSendContent(message!);
+    }
     var result = await ImGrpc.sendMsg(
       senderUid: accountService.mid,
       receiverId: mid!,
       content: msgType == 5
           ? message!
-          : jsonEncode(picMsg ?? {"content": message!}),
+          : jsonEncode(picMsg ?? {"content": processedMessage}),
       msgType: MsgType.values[msgType ?? (picMsg != null ? 2 : 1)],
     );
     SmartDialog.dismiss();

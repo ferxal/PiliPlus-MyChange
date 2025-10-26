@@ -356,14 +356,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.2"
-  cupertino_icons:
-    dependency: "direct main"
-    description:
-      name: cupertino_icons
-      sha256: ba631d1c7f7bef6b729a622b7b752645a2d076dba9976925b8f25725a30e1ee6
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.8"
   dart_style:
     dependency: transitive
     description:
@@ -1104,12 +1096,11 @@ packages:
   media_kit_libs_android_video:
     dependency: "direct overridden"
     description:
-      path: "libs/android/media_kit_libs_android_video"
-      ref: "version_1.2.5"
-      resolved-ref: bc999bf181ddf12d60891f76e41359e4177b93a7
-      url: "https://github.com/bggRGjQaUbCoE/media-kit.git"
-    source: git
-    version: "1.3.7"
+      name: media_kit_libs_android_video
+      sha256: df98da77eb6ec3473cf627abc68702f9be5a47fd788de7fb4c70863ee82789c5
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.5"
   media_kit_libs_ios_video:
     dependency: transitive
     description:
@@ -1137,11 +1128,10 @@ packages:
   media_kit_libs_video:
     dependency: "direct main"
     description:
-      path: "libs/universal/media_kit_libs_video"
-      ref: "version_1.2.5"
-      resolved-ref: bc999bf181ddf12d60891f76e41359e4177b93a7
-      url: "https://github.com/bggRGjQaUbCoE/media-kit.git"
-    source: git
+      name: media_kit_libs_video
+      sha256: "20bb4aefa8fece282b59580e1cd8528117297083a6640c98c2e98cfc96b93288"
+      url: "https://pub.dev"
+    source: hosted
     version: "1.0.5"
   media_kit_libs_windows_video:
     dependency: "direct overridden"
@@ -1155,12 +1145,11 @@ packages:
   media_kit_native_event_loop:
     dependency: "direct overridden"
     description:
-      path: media_kit_native_event_loop
-      ref: "version_1.2.5"
-      resolved-ref: bc999bf181ddf12d60891f76e41359e4177b93a7
-      url: "https://github.com/bggRGjQaUbCoE/media-kit.git"
-    source: git
-    version: "1.0.9"
+      name: media_kit_native_event_loop
+      sha256: a605cf185499d14d58935b8784955a92a4bf0ff4e19a23de3d17a9106303930e
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
   media_kit_video:
     dependency: "direct main"
     description:
@@ -1306,14 +1295,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "13.0.1"
-  permission_handler_apple:
-    dependency: "direct main"
-    description:
-      name: permission_handler_apple
-      sha256: f000131e755c54cf4d84a5d8bd6e4149e262cc31c5a8b1d698de1ac85fa41023
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.4.7"
   permission_handler_platform_interface:
     dependency: "direct main"
     description:
@@ -1451,7 +1432,7 @@ packages:
     source: hosted
     version: "2.1.3"
   screen_brightness_ios:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
       name: screen_brightness_ios
       sha256: "2493953340ecfe8f4f13f61db50ce72533a55b0bbd58ba1402893feecf3727f5"

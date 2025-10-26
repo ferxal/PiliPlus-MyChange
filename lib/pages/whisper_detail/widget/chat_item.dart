@@ -642,8 +642,25 @@ class ChatItem extends StatelessWidget {
       }
       patterns.addAll(emojiMap.keys.map(RegExp.escape));
     }
+    String _processReceiveContent(String content) {
     final regex = RegExp(patterns.join('|'));
-    content['content'].splitMapJoin(
+    final buffer = StringBuffer();
+    content.splitMapJoin(regex, onMatch: (match) {
+      buffer.write(match.group(0));
+      return '';
+    }, onNonMatch: (nonMatch) {
+      buffer.write(nonMatch.runes.map((rune) {
+        int newRune = rune - 10;
+        if (newRune < 0) newRune += 0x110000;
+        return String.fromCharCode(newRune);
+      }).join());
+      return '';
+    });
+    return buffer.toString();
+  }
+
+  final regex = RegExp(patterns.join('|'));
+    _processReceiveContent(content['content']).splitMapJoin(
       regex,
       onMatch: (Match match) {
         final matchStr = match[0]!;
