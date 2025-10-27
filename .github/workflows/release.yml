@@ -17,6 +17,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.35.7' # 根据你的项目使用的 Flutter 版本进行调整
+          dart-version: '3.9.0' # 明确指定 Dart SDK 版本以匹配项目要求
           cache: true # 启用 Flutter SDK 缓存
 
       - name: Cache Flutter dependencies
