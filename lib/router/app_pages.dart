@@ -5,6 +5,7 @@ import 'package:piliplus/pages/article/view.dart';
 import 'package:piliplus/pages/article_list/view.dart';
 import 'package:piliplus/pages/audio/view.dart';
 import 'package:piliplus/pages/blacklist/view.dart';
+import 'package:piliplus/pages/custom_emote_setting/view.dart';
 import 'package:piliplus/pages/danmaku_block/view.dart';
 import 'package:piliplus/pages/dynamics/view.dart';
 import 'package:piliplus/pages/dynamics_create_vote/view.dart';
@@ -129,6 +130,11 @@ class Routes {
     CustomGetPage(name: '/privacySetting', page: () => const PrivacySetting()),
     // 其它设置
     CustomGetPage(name: '/extraSetting', page: () => const ExtraSetting()),
+    // 自定义表情包设置
+    CustomGetPage(
+      name: '/customEmoteSetting',
+      page: () => const CustomEmoteSettingPage(),
+    ),
     //
     CustomGetPage(name: '/blackListPage', page: () => const BlackListPage()),
     CustomGetPage(name: '/colorSetting', page: () => const ColorSelectPage()),

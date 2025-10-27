@@ -118,17 +118,27 @@ class _MainAppState extends State<MainApp>
 
   @override
   Future<void> onWindowMoved() async {
-    final Offset offset = await windowManager.getPosition();
-    _setting.put(SettingBoxKey.windowPosition, [offset.dx, offset.dy]);
+    try {
+      final Offset offset = await windowManager.getPosition();
+      _setting.put(SettingBoxKey.windowPosition, [offset.dx, offset.dy]);
+    } catch (e) {
+      // 忽略窗口位置获取失败
+    }
   }
 
   @override
   Future<void> onWindowResized() async {
-    final Rect bounds = await windowManager.getBounds();
-    _setting.putAll({
-      SettingBoxKey.windowSize: [bounds.width, bounds.height],
-      SettingBoxKey.windowPosition: [bounds.left, bounds.top],
-    });
+    try {
+      final Rect? bounds = await windowManager.getBounds();
+      if (bounds != null) {
+        _setting.putAll({
+          SettingBoxKey.windowSize: [bounds.width, bounds.height],
+          SettingBoxKey.windowPosition: [bounds.left, bounds.top],
+        });
+      }
+    } catch (e) {
+      // 忽略窗口大小获取失败
+    }
   }
 
   @override

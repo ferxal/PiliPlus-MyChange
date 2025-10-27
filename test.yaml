@@ -1,0 +1,49 @@
+# ================================
+# 表情包配置文件格式说明
+# ================================
+# config: 全局配置信息
+#   - version: 配置文件版本号
+#   - updated_at: 最后更新时间
+# categories: 表情包分类数组
+#   - id: 分类唯一标识
+#   - name: 分类显示名称
+#   - description: 分类描述
+#   - emojis: 该分类下的表情包数组
+#     - name: 表情包名称
+#     - code: 表情包代码，格式必须为 [meme]（中括号），与B站表情包格式一致
+#     - url: 表情包图片URL（支持外部CDN，如jsdelivr、GitHub等）
+#     - file_size: 文件大小（字节，用于预加载优化）
+#     - animated: 是否为动图（true/false）
+#     - validity: 生效时间范围（可选）
+#       - start: 开始时间（*表示永久）
+#       - end: 结束时间（*表示永久）
+
+# ================================
+# 表情包配置内容
+# ================================
+config:
+  version: "1.1.0"
+  updated_at: "2024-01-15T10:30:00Z"
+
+categories:
+  - id: "honkai3"
+    name: "崩坏3"
+    description: "崩坏3系列表情包"
+    emojis:
+      - name: "崩坏3-纯净-3"
+        code: "[honkai3_pure_3]"
+        url: "https://cdn.jsdelivr.net/gh/2x-ercha/twikoo-magic@master/image/HONKAI3-Pure/11.gif"
+        file_size: 45800
+        animated: true
+        validity:
+          start: "*"
+          end: "*"
+
+      - name: "崩坏3-纯净-4"
+        code: "[honkai3_pure_4]"
+        url: "https://cdn.jsdelivr.net/gh/2x-ercha/twikoo-magic@master/image/HONKAI3-Pure/12.gif"
+        file_size: 51200
+        animated: true
+        validity:
+          start: "*"
+          end: "*"

@@ -226,6 +226,7 @@ dependencies:
   flutter_cache_manager: any
   http2: any
   screen_retriever: any
+  yaml: ^3.1.2
 
 dependency_overrides:
   # screen_brightness: ^2.1.
@@ -305,6 +306,8 @@ flutter:
     - assets/images/video/
     - assets/images/paycoins/
     - assets/shaders/
+    - config/
+    - test.yaml
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

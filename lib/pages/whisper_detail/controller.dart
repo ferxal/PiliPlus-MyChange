@@ -11,34 +11,45 @@ import 'package:piliplus/grpc/bilibili/im/type.pb.dart' show Msg, MsgType;
 import 'package:piliplus/grpc/im.dart';
 import 'package:piliplus/http/loading_state.dart';
 import 'package:piliplus/http/msg.dart';
+import 'package:piliplus/models_new/emote/package.dart';
 import 'package:piliplus/pages/common/common_list_controller.dart';
 import 'package:piliplus/services/account_service.dart';
+import 'package:piliplus/services/custom_emote_service.dart';
 import 'package:piliplus/utils/extension.dart';
 import 'package:piliplus/utils/feed_back.dart';
+import 'package:piliplus/utils/storage_pref.dart';
 
 class WhisperDetailController extends CommonListController<RspSessionMsg, Msg> {
   final _emojiPattern = RegExp(r'\[.*?\]');
 
   String _processSendContent(String content) {
+    print('📤 原始消息: $content');
+    
     final buffer = StringBuffer();
     content.splitMapJoin(
       _emojiPattern,
       onMatch: (match) {
-        buffer.write(match.group(0));
+        final emoteCode = match.group(0)!;
+        print('  ✓ 表情符不加密: $emoteCode');
+        buffer.write(emoteCode);  // 表情符保持原样
         return '';
       },
       onNonMatch: (nonMatch) {
-        buffer.write(
-          nonMatch.runes.map((rune) {
+        if (nonMatch.isNotEmpty) {
+          final encrypted = nonMatch.runes.map((rune) {
             int newRune = rune + 10;
             if (newRune > 0x10FFFF) newRune -= 0x110000;
             return String.fromCharCode(newRune);
-          }).join(),
-        );
+          }).join();
+          print('  🔒 文本加密: "$nonMatch" -> "$encrypted"');
+          buffer.write(encrypted);  // 文本加密
+        }
         return '';
       },
     );
-    return '\uFFFF' + buffer.toString();
+    final result = '\uFFFF' + buffer.toString();
+    print('📤 加密后消息: $result');
+    return result;
   }
 
   AccountService accountService = Get.find<AccountService>();
@@ -57,7 +68,44 @@ class WhisperDetailController extends CommonListController<RspSessionMsg, Msg> {
   @override
   void onInit() {
     super.onInit();
+    _loadCustomEmotes();
     queryData();
+  }
+
+  /// 加载自定义表情包并添加到eInfos
+  Future<void> _loadCustomEmotes() async {
+    try {
+      final customEmoteService = Get.put(CustomEmoteService());
+      final customUrls = Pref.customEmoteUrls;
+      
+      final result = await customEmoteService.loadEmotePackages(customUrls);
+      
+      if (result is Success<List<Package>>) {
+        eInfos ??= <EmotionInfo>[];
+        
+        // 将自定义表情包转换为EmotionInfo
+        final packages = result.response;
+        for (var package in packages) {
+          if (package.emote != null) {
+            for (var emote in package.emote!) {
+              // 检查是否已存在（避免重复）
+              if (!eInfos!.any((e) => e.text == emote.text)) {
+                eInfos!.add(EmotionInfo(
+                  text: emote.text,
+                  url: emote.url,
+                  size: emote.meta?.size ?? 1,
+                  gifUrl: emote.meta?.size == 2 ? emote.url : null, // 如果是动图，设置gifUrl
+                ));
+              }
+            }
+          }
+        }
+        
+        print('✓ 自定义表情包已加载到私信：${eInfos!.length}个表情');
+      }
+    } catch (e) {
+      print('✗ 加载自定义表情包到私信失败: $e');
+    }
   }
 
   @override
@@ -72,8 +120,15 @@ class WhisperDetailController extends CommonListController<RspSessionMsg, Msg> {
       } else {
         ackSessionMsg(msgs.last.msgSeqno.toInt());
       }
+      // 初始化 eInfos（如果为空），但不要覆盖已有的自定义表情包
       eInfos ??= <EmotionInfo>[];
-      eInfos!.addAll(response.response.eInfos);
+      // 只添加 B站表情包，避免重复
+      final biliEmotes = response.response.eInfos;
+      for (var emote in biliEmotes) {
+        if (!eInfos!.any((e) => e.text == emote.text)) {
+          eInfos!.add(emote);
+        }
+      }
     }
     return false;
   }
@@ -145,11 +200,13 @@ class WhisperDetailController extends CommonListController<RspSessionMsg, Msg> {
   }
 
   @override
-  Future<void> onRefresh() {
+  Future<void> onRefresh() async {
     msgSeqno = null;
     eInfos = null;
     scrollController.jumpToTop();
-    return super.onRefresh();
+    await super.onRefresh();
+    // 刷新后重新加载自定义表情包
+    await _loadCustomEmotes();
   }
 
   @override

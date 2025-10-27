@@ -64,7 +64,12 @@ class _EmotePanelState extends State<EmotePanel>
                           }
                           final flag = emote.first.meta?.size == 1;
                           final size = flag ? 40.0 : 60.0;
-                          final isTextEmote = e.type == 4;
+                          // 修复：根据是否有URL来判断是否显示图片，而不是type
+                          // 自定义表情包有URL，应该显示图片
+                          final firstEmote = emote.first;
+                          final hasUrl = firstEmote.url?.isNotEmpty == true;
+                          final isTextEmote = !hasUrl;
+                          
                           return GridView.builder(
                             padding: const EdgeInsets.only(
                               left: 12,
@@ -78,25 +83,32 @@ class _EmotePanelState extends State<EmotePanel>
                                   mainAxisSpacing: 8,
                                   mainAxisExtent: size,
                                 ),
+                            // 性能优化：添加缓存范围
+                            cacheExtent: 500,
                             itemCount: emote.length,
                             itemBuilder: (context, index) {
                               final item = emote[index];
+                              final itemHasUrl = item.url?.isNotEmpty == true;
+                              
                               Widget child = Padding(
                                 padding: const EdgeInsets.all(6),
-                                child: isTextEmote
-                                    ? Center(
-                                        child: Text(
-                                          item.text ?? '',
-                                          overflow: TextOverflow.clip,
-                                          maxLines: 1,
-                                        ),
-                                      )
-                                    : NetworkImgLayer(
+                                child: itemHasUrl
+                                    ? NetworkImgLayer(
                                         src: item.url,
                                         width: size,
                                         height: size,
                                         type: ImageType.emote,
                                         boxFit: BoxFit.contain,
+                                        // 性能优化：添加fade动画时长
+                                        fadeInDuration: const Duration(milliseconds: 100),
+                                        fadeOutDuration: const Duration(milliseconds: 50),
+                                      )
+                                    : Center(
+                                        child: Text(
+                                          item.text ?? '',
+                                          overflow: TextOverflow.clip,
+                                          maxLines: 1,
+                                        ),
                                       ),
                               );
                               if (!isTextEmote) {
@@ -145,15 +157,20 @@ class _EmotePanelState extends State<EmotePanel>
                                   borderRadius: const BorderRadius.all(
                                     Radius.circular(6),
                                   ),
-                                  onTap: () => widget.onChoose(
-                                    item,
-                                    isTextEmote
-                                        ? null
-                                        : flag
-                                        ? 24
-                                        : 42,
-                                    null,
-                                  ),
+                                  onTap: () {
+                                    // 自定义表情包（type=4）应该插入文本，传null作为width
+                                    // B站图片表情应该插入图片，传width参数
+                                    final shouldInsertText = e.type == 4 || isTextEmote;
+                                    widget.onChoose(
+                                      item,
+                                      shouldInsertText
+                                          ? null
+                                          : flag
+                                          ? 24
+                                          : 42,
+                                      null,
+                                    );
+                                  },
                                   child: child,
                                 ),
                               );
@@ -170,7 +187,19 @@ class _EmotePanelState extends State<EmotePanel>
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: iconButton(
+                          iconSize: 20,
+                          iconColor: theme.colorScheme.onSurfaceVariant
+                              .withValues(alpha: 0.8),
+                          onPressed: () {
+                            Get.toNamed('/customEmoteSetting');
+                          },
+                          icon: const Icon(Icons.add_circle_outline),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
                         child: iconButton(
                           iconSize: 20,
                           iconColor: theme.colorScheme.onSurfaceVariant

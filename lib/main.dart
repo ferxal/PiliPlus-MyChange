@@ -37,28 +37,138 @@ import 'package:piliplus/utils/storage_key.dart';
 import 'package:piliplus/utils/storage_pref.dart';
 import 'package:piliplus/utils/theme_utils.dart';
 import 'package:piliplus/utils/utils.dart';
-import 'package:piliplus/utils/update.dart';
-import 'package:piliplus/utils/utils.dart';
-import 'package:piliplus/utils/init.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:window_manager/window_manager.dart' hide calcWindowPosition;
 
 WebViewEnvironment? webViewEnvironment;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Necessary initialization for package:media_kit.
   MediaKit.ensureInitialized();
-  await GStorage.init(); // Ensure GStorage is initialized before running the app
-  await initService();
-  await initHttp();
-  await initCatcher();
-  await initInAppWebView();
-  await initUpdate();
-  await initAppScheme();
-  await initCacheManage();
-  await initPlayer();
-  runApp(const MyApp());
+  try {
+    await GStorage.init();
+  } catch (e) {
+    await Utils.copyText(e.toString());
+    if (kDebugMode) debugPrint('GStorage init error: $e');
+    exit(0);
+  }
+  Get.lazyPut(AccountService.new);
+  HttpOverrides.global = _CustomHttpOverrides();
+
+  CacheManage.autoClearCache();
+
+  if (Utils.isMobile) {
+    await Future.wait([
+      SystemChrome.setPreferredOrientations(
+        [
+          DeviceOrientation.portraitUp,
+          if (Pref.horizontalScreen) ...[
+            DeviceOrientation.landscapeLeft,
+            DeviceOrientation.landscapeRight,
+          ],
+        ],
+      ),
+      setupServiceLocator(),
+    ]);
+  }
+
+  if (Platform.isWindows) {
+    if (await WebViewEnvironment.getAvailableVersion() != null) {
+      final dir = await getApplicationSupportDirectory();
+      webViewEnvironment = await WebViewEnvironment.create(
+        settings: WebViewEnvironmentSettings(
+          userDataFolder: path.join(dir.path, 'flutter_inappwebview'),
+        ),
+      );
+    }
+  }
+
+  Request();
+  Request.setCookie();
+  RequestUtils.syncHistoryStatus();
+  if (Utils.isMobile) {
+    PiliScheme.init();
+  }
+
+  SmartDialog.config.toast = SmartConfigToast(
+    displayType: SmartToastType.onlyRefresh,
+  );
+
+  if (Utils.isMobile) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarDividerColor: Colors.transparent,
+        statusBarColor: Colors.transparent,
+        systemNavigationBarContrastEnforced: false,
+      ),
+    );
+  } else if (Utils.isDesktop) {
+    await windowManager.ensureInitialized();
+
+    WindowOptions windowOptions = WindowOptions(
+      minimumSize: const Size(400, 720),
+      skipTaskbar: false,
+      titleBarStyle: Pref.showWindowTitleBar
+          ? TitleBarStyle.normal
+          : TitleBarStyle.hidden,
+      title: Constants.appName,
+    );
+    windowManager.waitUntilReadyToShow(windowOptions, () async {
+      final windowSize = Pref.windowSize;
+      await windowManager.setBounds(
+        await calcWindowPosition(windowSize) & windowSize,
+      );
+      if (Pref.isWindowMaximized) await windowManager.maximize();
+      await windowManager.show();
+      await windowManager.focus();
+    });
+  }
+
+  if (Pref.enableLog) {
+    // 异常捕获 logo记录
+    String buildConfig =
+        '''\n
+Build Time: ${DateFormatUtils.format(BuildConfig.buildTime, format: DateFormatUtils.longFormatDs)}
+Commit Hash: ${BuildConfig.commitHash}''';
+    final Catcher2Options debugConfig = Catcher2Options(
+      SilentReportMode(),
+      [
+        FileHandler(await LoggerUtils.getLogsPath()),
+        ConsoleHandler(
+          enableDeviceParameters: false,
+          enableApplicationParameters: false,
+          enableCustomParameters: true,
+        ),
+      ],
+      customParameters: {
+        'BuildConfig': buildConfig,
+      },
+    );
+
+    final Catcher2Options releaseConfig = Catcher2Options(
+      SilentReportMode(),
+      [
+        FileHandler(await LoggerUtils.getLogsPath()),
+        ConsoleHandler(
+          enableCustomParameters: true,
+        ),
+      ],
+      customParameters: {
+        'BuildConfig': buildConfig,
+      },
+    );
+
+    Catcher2(
+      debugConfig: debugConfig,
+      releaseConfig: releaseConfig,
+      runAppFunction: () {
+        runApp(const MyApp());
+      },
+    );
+  } else {
+    runApp(const MyApp());
+  }
 }
 
 class MyApp extends StatelessWidget {

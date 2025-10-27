@@ -1,7 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
 abstract class SettingBoxKey {
-  static const String btmProgressBehavior = 'btmProgressBehavior',
+  static const String customEmoteUrls = 'customEmoteUrls',
+      btmProgressBehavior = 'btmProgressBehavior',
       defaultVideoSpeed = 'defaultVideoSpeed',
       autoUpgradeEnable = 'autoUpgradeEnable',
       defaultVideoQa = 'defaultVideoQa',

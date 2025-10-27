@@ -1,6 +1,8 @@
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:piliplus/grpc/grpc_req.dart';
 import 'package:piliplus/http/init.dart';
 import 'package:piliplus/services/service_locator.dart';
+import 'package:piliplus/utils/accounts.dart';
 import 'package:piliplus/utils/app_scheme.dart';
 import 'package:piliplus/utils/cache_manage.dart';
 import 'package:piliplus/utils/update.dart';
@@ -16,6 +18,9 @@ Future<void> initService() async {
 Future<void> initHttp() async {
   // Request.init(); // 移除错误调用
   // Request 实例会在首次使用时自动初始化，无需手动调用
+  
+  // 初始化 gRPC 请求头（私信等功能需要）
+  GrpcReq.updateHeaders(Accounts.main.accessKey);
 }
 
 /// 初始化异常捕获器
@@ -25,7 +30,13 @@ Future<void> initCatcher() async {
 
 /// 初始化 WebView
 Future<void> initInAppWebView() async {
-  await InAppWebViewController.setWebContentsDebuggingEnabled(true);
+  try {
+    await InAppWebViewController.setWebContentsDebuggingEnabled(true);
+  } catch (e) {
+    // setWebContentsDebuggingEnabled 在某些平台（如 Windows）上未实现
+    // 捕获异常以避免程序崩溃
+    print('WebView debugging setup skipped: $e');
+  }
 }
 
 /// 初始化更新检查

@@ -263,20 +263,27 @@ abstract class ImageUtils {
   );
   static String thumbnailUrl(String? src, [int? quality]) {
     if (src != null && quality != 100) {
-      bool hasMatch = false;
-      src = src.splitMapJoin(
-        _thumbRegex,
-        onMatch: (Match match) {
-          hasMatch = true;
-          String suffix = match.group(3) ?? '.webp';
-          return '${match.group(1)}_${quality ?? GlobalData().imgQuality}q$suffix';
-        },
-        onNonMatch: (String str) {
-          return str;
-        },
-      );
-      if (!hasMatch) {
-        src += '@${quality ?? GlobalData().imgQuality}q.webp';
+      // 只对B站图片URL进行质量参数处理，避免破坏外部CDN的URL
+      final isBilibiliUrl = src.contains('bilibili.com') || 
+                           src.contains('hdslb.com') ||
+                           src.contains('bilivideo.com');
+      
+      if (isBilibiliUrl) {
+        bool hasMatch = false;
+        src = src.splitMapJoin(
+          _thumbRegex,
+          onMatch: (Match match) {
+            hasMatch = true;
+            String suffix = match.group(3) ?? '.webp';
+            return '${match.group(1)}_${quality ?? GlobalData().imgQuality}q$suffix';
+          },
+          onNonMatch: (String str) {
+            return str;
+          },
+        );
+        if (!hasMatch) {
+          src += '@${quality ?? GlobalData().imgQuality}q.webp';
+        }
       }
     }
     return src.http2https;

@@ -632,7 +632,10 @@ class ChatItem extends StatelessWidget {
     final style = TextStyle(color: textColor, letterSpacing: 0.6, height: 1.5);
     final List<InlineSpan> children = [];
     late final Map<String, Map> emojiMap = {};
-    final List<String> patterns = [Constants.urlRegex.pattern];
+    final List<String> patterns = [
+      Constants.urlRegex.pattern,
+      r'\[[\w_]+\]',  // 添加自定义表情包格式保护（[meme]格式）
+    ];
     if (eInfos != null) {
       for (var e in eInfos!) {
         emojiMap[e.text] ??= {

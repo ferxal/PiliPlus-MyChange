@@ -865,4 +865,15 @@ abstract class Pref {
 
   static bool get showTrayIcon =>
       _setting.get(SettingBoxKey.showTrayIcon, defaultValue: true);
+
+  static List<String> get customEmoteUrls => List<String>.from(
+    _setting.get(
+      SettingBoxKey.customEmoteUrls,
+      defaultValue: const [],
+    ),
+  );
+
+  static set customEmoteUrls(List<String> urls) {
+    _setting.put(SettingBoxKey.customEmoteUrls, urls);
+  }
 }

@@ -1,0 +1,58 @@
+# ================================
+# 表情包数据源配置文件
+# ================================
+# 此文件用于配置要加载的表情包YAML文件列表
+# 支持本地文件路径和远程HTTP/HTTPS URL
+# 所有引用的YAML文件必须遵循 test.yaml 的语法格式
+# ================================
+
+# 配置信息
+config:
+  version: "1.0.0"
+  description: "PiliPlus 自定义表情包数据源配置"
+  updated_at: "2024-01-15T20:00:00Z"
+
+# 表情包数据源列表
+# 每个数据源可以是本地文件路径或远程URL
+sources:
+  # 示例1: 本地测试文件（从assets加载，最快最稳定）
+  - url: "test.yaml"
+    name: "本地测试表情包"
+    enabled: true
+    description: "用于测试的本地表情包配置"
+  
+  # 示例1B: 远程CDN（如果本地测试成功，可以启用这个）
+  # - url: "https://cdn.chenhen.top/test.yaml"
+  #   name: "远程测试表情包"
+  #   enabled: true
+  #   description: "从CDN加载的表情包"
+  
+  # 示例2: 远程CDN
+  # - url: "https://cdn.example.com/emotes/honkai3.yaml"
+  #   name: "崩坏3表情包"
+  #   enabled: true
+  #   description: "崩坏3系列表情包"
+  
+  # 示例3: GitHub Raw
+  # - url: "https://raw.githubusercontent.com/username/repo/main/emotes.yaml"
+  #   name: "GitHub表情包"
+  #   enabled: true
+  #   description: "从GitHub仓库加载的表情包"
+  
+  # 示例4: 本地自定义路径
+  # - url: "C:/Users/YourName/Documents/my_emotes.yaml"
+  #   name: "我的表情包"
+  #   enabled: true
+  #   description: "个人收藏的表情包"
+
+# 使用说明:
+# 1. url: 表情包YAML文件的路径或URL（必填）
+# 2. name: 数据源名称，用于日志和调试（可选）
+# 3. enabled: 是否启用该数据源，false时会跳过加载（可选，默认true）
+# 4. description: 数据源描述信息（可选）
+#
+# 注意事项:
+# - 相对路径基于应用根目录解析
+# - 远程URL需要确保可访问
+# - 被引用的YAML文件必须符合标准表情包格式（参考test.yaml）
+# - enabled设为false的源会被跳过，不会尝试加载
