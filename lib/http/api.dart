@@ -1,4 +1,4 @@
-import 'package:piliplus/http/constants.dart';
+import 'package:PiliPlus/http/constants.dart';
 
 class Api {
   // 推荐视频
@@ -407,8 +407,7 @@ class Api {
   static const String blackLst = '/x/relation/blacks';
 
   // github 获取最新版
-  static const String latestApp =
-      'https://api.github.com/repos/ferxal/piliplus-MyChange/releases';
+  static const String latestApp = 'https://api.github.com/repos/ferxal/PiliPlus-MyChange/releases';
 
   // 多少人在看
   // https://api.bilibili.com/x/player/online/total?aid=913663681&cid=1203559746&bvid=BV1MM4y1s7NZ&ts=56427838

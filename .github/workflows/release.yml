@@ -3,71 +3,108 @@ name: Release
 on:
   push:
     tags:
-      - "v*"
+      - 'v*' # 当有以 'v' 开头的标签被推送时触发
 
 jobs:
-  build:
-    name: Build and Release
-    runs-on: ubuntu-latest
+  build_windows:
+    runs-on: ubuntu-latest # 使用 Ubuntu 运行构建
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Flutter
+      - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.16.0"
-          channel: "stable"
+          flutter-version: '3.35.7' # 根据你的项目使用的 Flutter 版本进行调整
+          cache: true # 启用 Flutter SDK 缓存
 
-      - name: Get dependencies
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.tool_cache }}/flutter/
+          key: ${{ runner.os }}-flutter-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-flutter-
+
+      - name: Get Flutter dependencies
         run: flutter pub get
 
-      - name: Build Windows
-        run: flutter build windows --release
+      - name: Run tests
+        run: flutter test # 添加自动化测试环节
 
+      - name: Build Windows executable
+        run: flutter build windows --release
+        # 你可能需要根据你的项目配置调整输出路径
       - name: Archive Windows build
         run: |
-          cd build/windows/runner/Release
-          7z a -tzip ../../../piliplus-Windows.zip .
-
-      - name: Build Android
-        run: flutter build apk --release
-
-      - name: Archive Android build
-        run: |
-          cd build/app/outputs/flutter-apk
-          7z a -tzip ../../../../piliplus-Android.zip app-release.apk
-
-      - name: Create Release
-        id: create_release
+          cd build/windows/x64/runner/Release
+          zip -r ../../../../PiliPlus-windows.zip .
+      - name: Upload Windows Release Asset
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: startsWith(github.ref, 'refs/tags/')
         with:
+          files: PiliPlus-windows.zip
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
           body: |
-            See the [change log](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/change_log/change_log.md) for more details.
+            # Release ${{ github.ref_name }}
+            
+            This is an automated release.
+            
+            ## Changes
+            
+            ${{ github.event.head_commit.message }} # 假设你的提交信息包含更新日志
           draft: false
           prerelease: false
-
-      - name: Upload Windows Release Asset
-        uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./piliplus-Windows.zip
-          asset_name: piliplus-Windows.zip
-          asset_content_type: application/zip
 
+  build_android:
+    runs-on: ubuntu-latest # 使用 Ubuntu 运行构建
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.35.7' # 根据你的项目使用的 Flutter 版本进行调整
+          cache: true # 启用 Flutter SDK 缓存
+
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.tool_cache }}/flutter/
+          key: ${{ runner.os }}-flutter-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-flutter-
+
+      - name: Get Flutter dependencies
+        run: flutter pub get
+
+      - name: Run tests
+        run: flutter test # 添加自动化测试环节
+
+      - name: Build Android APK
+        run: flutter build apk --release
       - name: Upload Android Release Asset
-        uses: actions/upload-release-asset@v1
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: build/app/outputs/flutter-apk/app-release.apk
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: |
+            # Release ${{ github.ref_name }}
+            
+            This is an automated release.
+            
+            ## Changes
+            
+            ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./piliplus-Android.zip
-          asset_name: piliplus-Android.zip
-          asset_content_type: application/zip
